@@ -10,12 +10,42 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel='stylesheet prefetch' href='https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css'>
         <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <title>Trang sản phẩm</title>
-        
+        <title>Trang giá cao đến thấp</title>
     </head>
 
     <!-- Phần thân -->
     <body bgcolor="#eceff3" class="body">
+        <script>
+            function Moinhat()
+            {
+                    window.location="sản phẩm mới nhất.html";
+            }
+
+            function Phobien()
+            {
+                   window.location="sản phẩm phổ biến.html";
+            }
+
+            function BanChay()
+            {
+                   window.location="Sản phẩm bán chạy.html";
+            }
+            function Sapxep()
+            {
+                  var t = document.getElementById("select").value;
+                  if (t=="increase")
+                  {
+                    window.location="Giá thấp đến cao.html";
+                  }
+                  else if (t=="decrease")
+                  {
+                    window.location="Giá cao đến thấp.html";
+                  }
+                  else
+                  { window.location="05-Product.html";
+                  }      
+            }
+        </script>
         <div class="header">
             <div class="searchbar">
                 <div class="logo">
@@ -69,38 +99,6 @@
                 </ul>
             </div>
         </div>
-        <script>
-            function Moinhat()
-            {
-                    window.location="sản phẩm mới nhất.html";
-            }
-
-            function Phobien()
-            {
-                   window.location="sản phẩm phổ biến.html";
-            }
-
-            function BanChay()
-            {
-                   window.location="Sản phẩm bán chạy.html";
-            }
-            function Sapxep()
-            {
-                  var t = document.getElementById("select").value;
-                  if (t=="increase")
-                  {
-                    window.location="Giá thấp đến cao.html";
-                  }
-                  else if (t=="decrease")
-                  {
-                    window.location="Giá cao đến thấp.html";
-                  }
-                  else
-                  { window.location="05-Product.html";
-                  }      
-            }
-        </script>
-    
         <div id="middle" class="middle">
     <!-- column 1 -->
     <div id="column1"> 
@@ -140,31 +138,8 @@
              </div>
             <!-- Phần sản phẩm -->
              <ul class="products">
-             <!-- Sản phẩm 10 -->
-             <li>
-                <div class="product_item">
-                   <div class="product_top">
-                       <a href="Tăm que giòn vị chi tiết.html" class="product_pic">
-                       <img src="../image/product/tamquecaycay.jpg" alt="ảnh tăm que"></img>
-                       </a>
-                   </div>
-                   <div class="product_info">
-                       <a href="Tăm que giòn vị chi tiết.html" id="product_name">Tăm que giòn vị xóa tan mệt mỏi deadline</a> 
-                       <a href="Tăm que giòn vị chi tiết.html" id="product_price">7.000đ</a> 
-                       <a class="star2">
-                        <i id="sao1" class="fa fa-star"></i>
-                        <i id="sao2" class="fa fa-star"></i>
-                        <i id="sao3" class="fa fa-star"></i>
-                        <i id="sao4" class="fa fa-star"></i>
-                        <i id="sao5" class="fa fa-star"></i>
-                    </a>
-                       <a href="" id="diachi">Thành phố Hồ Chí Minh</a>
-                       <a href="" id="luotmua">200 đã bán</a>
-                   </div>
-                </div>
-                </li>
-                <!-- Sản phẩm 11 -->
-                <li>
+                 <!-- Sản phẩm 11 -->
+                 <li>
                     <div class="product_item">
                        <div class="product_top">
                            <a href="Khô gà lá chanh nhà làm.html" class="product_pic">
@@ -186,63 +161,17 @@
                        </div>
                     </div>
                  </li>
-                 <!-- Sản phẩm 12 -->
-                 <li>
-                    <div class="product_item">
-                       <div class="product_top">
-                           <a href="Khô heo giả bò chi tiết.html" class="product_pic">
-                           <img src="../image/product/khoheogiabo.jpg" alt="ảnh khô heo giả bò"></img>
-                           </a>
-                       </div>
-                       <div class="product_info">
-                           <a href="Khô heo giả bò chi tiết.html" id="product_name">Khô heo giả bò thấm trọn vị cay mê mẩn</a> 
-                           <a href="Khô heo giả bò chi tiết.html" id="product_price">10.000đ</a> 
-                           <a class="star2">
-                            <i id="sao1" class="fa fa-star"></i>
-                            <i id="sao2" class="fa fa-star"></i>
-                            <i id="sao3" class="fa fa-star"></i>
-                            <i id="sao4" class="fa fa-star"></i>
-                            <i id="sao5" class="fa fa-star"></i>
-                        </a>
-                           <a href="" id="diachi">Thành phố Hồ Chí Minh</a>
-                           <a href="" id="luotmua">100 đã bán</a>
-                       </div>
-                    </div>
-                 </li>
-                 <!-- Sản phẩm 13 -->
-                 <li>
-                    <div class="product_item">
-                       <div class="product_top">
-                           <a href="Quẩy bò ZinZin chi tiết.html" class="product_pic">
-                           <img src="../image/product/quaybozinzin.jpg" alt="ảnh quẩy bò"></img>
-                           </a>
-                       </div>
-                       <div class="product_info">
-                           <a href="Quẩy bò ZinZin chi tiết.html" id="product_name">Quẩy bò ZinZin chill cùng deadline mỗi ngày</a> 
-                           <a href="Quẩy bò ZinZin chi tiết.html" id="product_price">7.000đ</a> 
-                           <a class="star2">
-                            <i id="sao1" class="fa fa-star"></i>
-                            <i id="sao2" class="fa fa-star"></i>
-                            <i id="sao3" class="fa fa-star"></i>
-                            <i id="sao4" class="fa fa-star"></i>
-                            <i id="sao5" class="fa fa-star"></i>
-                        </a>
-                           <a href="" id="diachi">Thành phố Hồ Chí Minh</a>
-                           <a href="" id="luotmua">110 đã bán</a>
-                       </div>
-                    </div>
-                 </li>
-                  <!-- Sản phẩm 9 -->
+                 <!-- Sản phẩm 1 -->
              <li>
                 <div class="product_item">
                    <div class="product_top">
-                       <a href="Snack bò thơm cay chi tiết.html" class="product_pic">
-                       <img src="../image/product/snackbothomcay.jpg" alt="ảnh snack bò"></img>
+                       <a href="Cơm cháy lắc khô gà chi tiết.html" class="product_pic">
+                       <img src="../image/product/comchaykhoga.jpg" alt="ảnh cơm cháy lắc khô gà đậm vị"></img>
                        </a>
                    </div>
                    <div class="product_info">
-                       <a href="Snack bò thơm cay chi tiết.html" id="product_name">Snack bò thơm cay xé tan lo âu căng thẳng</a> 
-                       <a href="Snack bò thơm cay chi tiết.html" id="product_price">4.000đ</a> 
+                       <a href="Cơm cháy lắc khô gà chi tiết.html" id="product_name">Cơm cháy lắc khô gà đậm vị giòn tan luôn nè</a> 
+                       <a href="Cơm cháy lắc khô gà chi tiết.html" id="product_price" name="txtprice">12.000đ</a> 
                        <a class="star2">
                            <i id="sao1" class="fa fa-star"></i>
                            <i id="sao2" class="fa fa-star"></i>
@@ -251,13 +180,150 @@
                            <i id="sao5" class="fa fa-star"></i>
                        </a>
                        <a href="" id="diachi">Thành phố Hồ Chí Minh</a>
-                       <a href="" id="luotmua">212 đã bán</a>
+                       <a href="" id="luotmua">22 đã bán</a>
+                   </div>
+                </div>
+                </li>
+                 <!-- Sản phẩm 3 -->
+                 <li>
+                    <div class="product_item">
+                       <div class="product_top">
+                           <a href="Bánh tráng rong biển chi tiết.html" class="product_pic">
+                           <img src="../image/product/banhtrangrongbien.jpg" alt="ảnh bánh tráng rong biển"></img>
+                           </a>
+                       </div>
+                       <div class="product_info">
+                           <a href="Bánh tráng rong biển chi tiết.html" id="product_name">Bánh tráng rong biển cay giòn cháy tỏi đậm đà</a> 
+                           <a href="Bánh tráng rong biển chi tiết.html" id="product_price"  name="txtprice">12.000đ</a> 
+                           <a class="star2">
+                            <i id="sao1" class="fa fa-star"></i>
+                            <i id="sao2" class="fa fa-star"></i>
+                            <i id="sao3" class="fa fa-star"></i>
+                            <i id="sao4" class="fa fa-star"></i>
+                            <i id="sao5" class="fa fa-star"></i>
+                        </a>
+                           <a href="" id="diachi">Thành phố Hồ Chí Minh</a>
+                           <a href="" id="luotmua">250 đã bán</a>
+                       </div>
+                    </div>
+                 </li>
+             <!-- Sản phẩm 7 -->
+             <li>
+                <div class="product_item">
+                   <div class="product_top">
+                       <a href="Bánh tráng sa tế tắc chi tiết.html" class="product_pic">
+                       <img src="../image/product/banhtrangsatetac.jpg" alt="ảnh bánh tráng sa tế tắc"></img>
+                       </a>
+                   </div>
+                   <div class="product_info">
+                       <a href="Bánh tráng sa tế tắc chi tiết.html" id="product_name">Bánh tráng sa tế tắc cay cay nhà làm ngon ngon</a> 
+                       <a href="Bánh tráng sa tế tắc chi tiết.html" id="product_price"  name="txtprice">10.000đ</a> 
+                       <a class="star2">
+                        <i id="sao1" class="fa fa-star"></i>
+                        <i id="sao2" class="fa fa-star"></i>
+                        <i id="sao3" class="fa fa-star"></i>
+                        <i id="sao4" class="fa fa-star"></i>
+                        <i id="sao5" class="fa fa-star"></i>
+                    </a>
+                       <a href="" id="diachi">Thành phố Hồ Chí Minh</a>
+                       <a href="" id="luotmua">100 đã bán</a>
+                   </div>
+                </div>
+             </li>
+             <!-- Sản phẩm 12 -->
+             <li>
+                <div class="product_item">
+                   <div class="product_top">
+                       <a href="Khô heo giả bò chi tiết.html" class="product_pic">
+                       <img src="../image/product/khoheogiabo.jpg" alt="ảnh khô heo giả bò"></img>
+                       </a>
+                   </div>
+                   <div class="product_info">
+                       <a href="Khô heo giả bò chi tiết.html" id="product_name">Khô heo giả bò thấm trọn vị cay mê mẩn</a> 
+                       <a href="Khô heo giả bò chi tiết.html" id="product_price">10.000đ</a> 
+                       <a class="star2">
+                        <i id="sao1" class="fa fa-star"></i>
+                        <i id="sao2" class="fa fa-star"></i>
+                        <i id="sao3" class="fa fa-star"></i>
+                        <i id="sao4" class="fa fa-star"></i>
+                        <i id="sao5" class="fa fa-star"></i>
+                    </a>
+                       <a href="" id="diachi">Thành phố Hồ Chí Minh</a>
+                       <a href="" id="luotmua">100 đã bán</a>
+                   </div>
+                </div>
+             </li>
+                         <!-- Sản phẩm 5 -->
+                         <li>
+                            <div class="product_item">
+                               <div class="product_top">
+                                   <a href="bánh tráng tôm hành phô mai đậm đà chi tiết.html" class="product_pic">
+                                   <img src="../image/product/banhtrangphomaitomhanh.jpg" alt="ảnh bánh tráng phô mai tôm hành"></img>
+                                   </a>
+                               </div>
+                               <div class="product_info">
+                                   <a href="bánh tráng tôm hành phô mai đậm đà chi tiết.html" id="product_name">Bánh tráng phô mai tôm hành thơm ngon đặc biệt</a> 
+                                   <a href="bánh tráng tôm hành phô mai đậm đà chi tiết.html" id="product_price"  name="txtprice">10.000đ</a> 
+                                   <a class="star2">
+                                    <i id="sao1" class="fa fa-star"></i>
+                                    <i id="sao2" class="fa fa-star"></i>
+                                    <i id="sao3" class="fa fa-star"></i>
+                                    <i id="sao4" class="fa fa-star"></i>
+                                    <i id="sao5" class="fa fa-star"></i>
+                                </a>
+                                   <a href="" id="diachi">Thành phố Hồ Chí Minh</a>
+                                   <a href="" id="luotmua">120 đã bán</a>
+                               </div>
+                            </div>
+                         </li>
+                         <!-- Sản phẩm 2 -->
+              <li>
+                <div class="product_item">
+                   <div class="product_top">
+                       <a href="Bánh tráng cuộn bơ chi tiết.html" class="product_pic">
+                       <img src="../image/product/banhtrangbocuon.jpg" alt="ảnh bánh tráng bơ cuộn"></img>
+                       </a>
+                   </div>
+                   <div class="product_info">
+                       <a href="Bánh tráng cuộn bơ chi tiết.html" id="product_name">Bánh tráng cuộn bơ mềm dẻo béo thơm ngất</a> 
+                       <a href="Bánh tráng cuộn bơ chi tiết.html" id="product_price"  name="txtprice">10.000đ</a> 
+                       <a class="star2">
+                        <i id="sao1" class="fa fa-star"></i>
+                        <i id="sao2" class="fa fa-star"></i>
+                        <i id="sao3" class="fa fa-star"></i>
+                        <i id="sao4" class="fa fa-star"></i>
+                        <i id="sao5" class="fa fa-star"></i>
+                    </a>
+                       <a href="" id="diachi">Thành phố Hồ Chí Minh</a>
+                       <a href="" id="luotmua">200 đã bán</a>
+                   </div>
+                </div>
+                </li>
+                 <!-- Sản phẩm 10 -->
+               <li>
+                <div class="product_item">
+                   <div class="product_top">
+                       <a href="Tăm que giòn vị chi tiết.html" class="product_pic">
+                       <img src="../image/product/tamquecaycay.jpg" alt="ảnh tăm que"></img>
+                       </a>
+                   </div>
+                   <div class="product_info">
+                       <a href="Tăm que giòn vị chi tiết.html" id="product_name">Tăm que giòn vị xóa tan mệt mỏi deadline</a> 
+                       <a href="Tăm que giòn vị chi tiết.html" id="product_price">7.000đ</a> 
+                       <a class="star2">
+                        <i id="sao1" class="fa fa-star"></i>
+                        <i id="sao2" class="fa fa-star"></i>
+                        <i id="sao3" class="fa fa-star"></i>
+                        <i id="sao4" class="fa fa-star"></i>
+                        <i id="sao5" class="fa fa-star"></i>
+                    </a>
+                       <a href="" id="diachi">Thành phố Hồ Chí Minh</a>
+                       <a href="" id="luotmua">200 đã bán</a>
                    </div>
                 </div>
                 </li>
              </ul>
-             <div>
-                <a href="05-Product.html"><Button id="btn_back2"><</Button></a>
+                 <a href="decrease2.html"><Button id="btn_next2">></Button></a>
             </div>
             </div>  
         </div>
