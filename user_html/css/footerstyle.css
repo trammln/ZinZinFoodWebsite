@@ -143,6 +143,7 @@ div.box_input_group{
 .box_input_group .inputbox{
     width: 500px;
     height: 40px;
+    background-color: #fff;
     border-radius: 5px;
     border: 1px solid #BD3213;
     margin: 0px 10px 0px 0px;

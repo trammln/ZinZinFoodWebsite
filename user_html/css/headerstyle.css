@@ -2,6 +2,10 @@ body{
     margin: 0px;
 }
 .header{
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    top: 0;
     background-color:#BD3213;
     background-size: cover;
     padding: 5px;
