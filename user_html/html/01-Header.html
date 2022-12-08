@@ -43,28 +43,121 @@
                         </ul>
                         </div>
                     </div>
-
-            <!-- Search box -->
-                    <div><input class="inputbox-search" data-view-id="main_search_from_input" type="text" value placeholder="Tìm kiếm đồ ăn vặt" ></div>
-                    <div class="button_search_group">
-                        <button data-view-id="main_search_from_button" class="Search_Button">
-                            <i class="fa fa-search" aria-hidden="true"></i></button>
-                    </div>
-                </div>
-                
+        
+             <form onsubmit="submitForm(event)">
+                            <div><input class="inputbox-search" data-view-id="main_search_from_input" type="text" value placeholder="Tìm kiếm đồ ăn vặt" id="inputvalue"></div>
+                        </div> 
+                        <!-- <input data-view-id="main_search_from_button" class="Search_Button" type="submit" title="Tìm kiếm" /> -->
+                        <div class="button_search_group">
+                            <button data-view-id="main_search_from_button" class="Search_Button">
+                                <i class="fa fa-search" aria-hidden="true"></i></button>
+                        </div>
+                        <div id="results"></div>
+                            <script>
+                                function submitForm(event){ 
+                                event.preventDefault();
+                                var ele = document.getElementById("inputvalue");                
+                       
+                                if (ele.value +""==="bánh tráng"){window.location.replace("search_banhtrang.html")}
+                                else if (ele.value +""==="banh trang"){window.location.replace("search_banhtrang.html")}
+                                else if (ele.value +""==="bánh tráng cuộn bơ"){window.location.replace("search_banhtrangcuonbo.html")}
+                                else if (ele.value +""==="cuộn bơ"){ window.location.replace("search_banhtrangcuonbo.html")}
+                                else if (ele.value +""==="cuon bo"){window.location.replace("search_banhtrangcuonbo.html")}
+                                else if (ele.value +""==="banh trang cuon bo"){window.location.replace("search_banhtrangcuonbo.html")}
+         
+                                else if (ele.value +""==="bánh tráng phô mai"){window.location.replace("search_banhtrangphomaitomhanh.html")}
+                                else if (ele.value +""==="banh trang pho mai"){window.location.replace("search_banhtrangphomaitomhanh.html")}
+                                else if (ele.value +""==="phô mai"){window.location.replace("search_banhtrangphomaitomhanh.html")}
+                                else if (ele.value +""==="pho mai"){window.location.replace("search_banhtrangphomaitomhanh.html")}
+                                
+                                else if (ele.value +""==="bánh tráng rong biển"){ window.location.replace("search_banhtrangrongbien.html")}
+                                else if (ele.value +""==="banh trang rong bien"){ window.location.replace("search_banhtrangrongbien.html")}
+                                else if (ele.value +""==="rong biển"){ window.location.replace("search_banhtrangrongbien.html")}
+                                else if (ele.value +""==="rong bien"){ window.location.replace("search_banhtrangrongbien.html")}
+        
+                                else if (ele.value +""==="bánh tráng sa tế bò"){window.location.replace("search_banhtrangsatebo.html")}
+                                else if (ele.value +""==="banh trang sa te bo"){window.location.replace("search_banhtrangsatebo.html")}
+                                else if (ele.value +""==="sa tế bò"){window.location.replace("search_banhtrangsatebo.html")}
+                                else if (ele.value +""==="sa te bo"){window.location.replace("search_banhtrangsatebo.html")}
+                                else if (ele.value +""==="sate bò"){window.location.replace("search_banhtrangsatebo.html")}
+                                else if (ele.value +""==="sate bo"){window.location.replace("search_banhtrangsatebo.html")}
+                                else if (ele.value +""==="bò"){window.location.replace("search_banhtrangsatebo.html")}
+                                else if (ele.value +""==="bo"){window.location.replace("search_banhtrangsatebo.html")}
+                                else if (ele.value +""==="sate"){window.location.replace("search_banhtrangsatebo.html")}
+                                else if (ele.value +""==="sa tế"){window.location.replace("search_banhtrangsatebo.html")}
+                                
+                                else if (ele.value +""==="bánh tráng sa tế tắc"){window.location.replace("search_banhtrangsatetac.html")}
+                                else if (ele.value +""==="banh trang sa te tac"){window.location.replace("search_banhtrangsatetac.html")}
+                                else if (ele.value +""==="sa tế tắc"){window.location.replace("search_banhtrangsatetac.html")}
+                                else if (ele.value +""==="sa te tac"){window.location.replace("search_banhtrangsatetac.html")}
+                                else if (ele.value +""==="sate tắc"){window.location.replace("search_banhtrangsatetac.html")}
+                                else if (ele.value +""==="sate tac"){window.location.replace("search_banhtrangsatetac.html")}
+                                else if (ele.value +""==="tắc"){window.location.replace("search_banhtrangsatetac.html")}
+                                else if (ele.value +""==="tac"){window.location.replace("search_banhtrangsatetac.html")}
+            
+                                else if (ele.value +""==="bánh tráng tỏi phi cay"){window.location.replace("search_banhtrangtoiphicay.html")}
+                                else if (ele.value +""==="banh trang toi phi cay"){window.location.replace("search_banhtrangtoiphicay.html")}
+                                else if (ele.value +""==="tỏi phi cay"){window.location.replace("search_banhtrangtoiphicay.html")}
+                                else if (ele.value +""==="toi phi cay"){window.location.replace("search_banhtrangtoiphicay.html")}
+                                
+                                else if (ele.value +""==="cơm cháy khô gà"){ window.location.replace("search_comchaykhoga.html")}
+                                else if (ele.value +""==="com chay kho ga"){ window.location.replace("search_comchaykhoga.html")}
+                                else if (ele.value +""==="cơm cháy"){ window.location.replace("search_comchaykhoga.html")}
+                                else if (ele.value +""==="com chay"){ window.location.replace("search_comchaykhoga.html")}
+                                
+                                else if (ele.value +""==="khô gà lá chanh"){window.location.replace("search_khogalachanh.html")}
+                                else if (ele.value +""==="kho ga la chanh"){window.location.replace("search_khogalachanh.html")}
+                                else if (ele.value +""==="khô gà"){window.location.replace("search_khogalachanh.html")}
+                                else if (ele.value +""==="kho ga"){window.location.replace("search_khogalachanh.html")}
+        
+                                
+                                else if (ele.value +""==="khô heo giả bò"){window.location.replace("search_khoheogiabo.html")}
+                                else if (ele.value +""==="kho heo gia bo"){window.location.replace("search_khoheogiabo.html")}
+                                else if (ele.value +""==="kho heo"){window.location.replace("search_khoheogiabo.html")}
+                                else if (ele.value +""==="khô heo"){window.location.replace("search_khoheogiabo.html")}
+                                else if (ele.value +""==="khô bò"){window.location.replace("search_khoheogiabo.html")}
+                                else if (ele.value +""==="kho bo"){window.location.replace("search_khoheogiabo.html")}
+        
+                                else if (ele.value +""==="tăm que cay cay"){window.location.replace("search_tamquecaycay.html")}
+                                else if (ele.value +""==="tăm que"){window.location.replace("search_tamquecaycay.html")}
+                                else if (ele.value +""==="tam que cay cay"){window.location.replace("search_tamquecaycay.html")}
+                                else if (ele.value +""==="tam que"){window.location.replace("search_tamquecaycay.html")}
+        
+                                else if (ele.value +""==="quẩy bò zinzin"){window.location.replace("search_quaybozinzin.html")}
+                                else if (ele.value +""==="quẩy bò"){window.location.replace("search_quaybozinzin.html")}
+                                else if (ele.value +""==="quay bo zinzin"){window.location.replace("search_quaybozinzin.html")}
+                                else if (ele.value +""==="quay bo"){window.location.replace("search_quaybozinzin.html")}
+        
+                                else if (ele.value +""==="mực bento cay cay" ){window.location.replace("search_mucbentocaycay.html")}
+                                else if (ele.value +""==="mực bento" ){window.location.replace("search_mucbentocaycay.html")}
+                                else if (ele.value +""==="muc bento cay cay" ){window.location.replace("search_mucbentocaycay.html")}
+                                else if (ele.value +""==="muc bento" ){window.location.replace("search_mucbentocaycay.html")}
+                                else if (ele.value +""==="bento" ){window.location.replace("search_mucbentocaycay.html")}
+        
+                                else if (ele.value +""==="snack bò thơm cay"){window.location.replace("search_snackbothomcay.html")}
+                                else if (ele.value +""==="snack bò"){window.location.replace("search_snackbothomcay.html")}
+                                else if (ele.value +""==="snack bo thom cay"){window.location.replace("search_snackbothomcay.html")}
+                                else if (ele.value +""==="snack bo"){window.location.replace("search_snackbothomcay.html")}
+                                else if (ele.value +""==="snack"){window.location.replace("search_snackbothomcay.html")}
+                                else if (ele.value +""==="thơm cay"){window.location.replace("search_snackbothomcay.html")}
+                                else if (ele.value +""==="thom cay"){window.location.replace("search_snackbothomcay.html")}
+        
+                                else  {   window.alert("Không có kết quả tìm kiếm!");}
+        
+                        } 
+                            </script>      
                 <div class="tool-group">
                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                     <i class="fa fa-bell" aria-hidden="true"></i>
                     <!-- <i class="fa fa-user" aria-hidden="true"></i> -->
-
+        
                     <div class="header-user-box">
                         <input type="checkbox" id="header-user">
                         <label for="header-user">
                             <div class="header-user-icon-div">
                                 <i class="fa fa-user" aria-hidden="true"></i>
                             </div>
-                        </label>
-                        
+                        </label>             
                         <div class="user-options">
                                 <li><a>Cá nhân</a></li>
                                 <li><a onclick="openFormLogin()">Đăng nhập</a></li>
@@ -72,11 +165,9 @@
                             </ul>
                         </div>
                     </div>
-                </div>
-
-                
+                </div>       
             </div>
-
+        
             <div class="navigationbar">
                 <ul class="navigationtab">
                     <li>Trang chủ</li>
@@ -171,7 +262,7 @@
                             <input class="login__form-input" type="password" placeholder="Mật khẩu" id="adminpassword">
                             <i onclick="togglepass3()" id="showbtn3" class=" fas fa-eye" aria-hidden="true" fill="none"></i>
                         </div>
-                        <p class="login-LostPassword lost_password"><a href="forgotpassword.html" id="linkforgotpassword">Quên mật khẩu </a></p>
+                        <p class="login-LostPassword lost_password"><a style="text-decoration: underline; cursor: pointer;" onclick="openFormForgot()" id="linkforgotpassword">Quên mật khẩu </a></p>
                         <button class="login__form-submit" id="btnadminlogin" name="btnlogin" type="submit">Đăng nhập</button>
                         <p class="login__form-admin"><a href="#top">Đăng nhập tài khoản khách hàng</a></p>                  
                     </form>
