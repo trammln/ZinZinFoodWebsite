@@ -14,22 +14,30 @@ for (let i = 0; i < tabsPane.length; i++) {
     });
 };
 
+function scrollToTop() {
+               window.scrollTo(0, 0);
+            }
+
 function openFormLogin() {
     document.getElementById("tab1").style.display = "none";
     document.getElementById("tab").style.display = "block";
+    document.body.style.setProperty('overflow', 'hidden');
   }
   
 function closeFormLogin() {
     document.getElementById("tab").style.display = "none";
+    document.body.style.removeProperty('overflow');
   } 
 
   function openFormForgot() {
     document.getElementById("tab").style.display = "none";
     document.getElementById("tab1").style.display = "block";
+    document.body.style.removeProperty('overflow');
   }
   
   function closeFormForgot() {
     document.getElementById("tab1").style.display = "none";
+    document.body.style.removeProperty('overflow');
   }
 
 function IsEmail(email) {

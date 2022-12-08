@@ -12,7 +12,6 @@
         
     </head>
     <body>
-        
         <div class="header">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
             <link rel="stylesheet" href="../css/headerstyle.css">
@@ -160,7 +159,7 @@
                         </label>             
                         <div class="user-options">
                                 <li><a>Cá nhân</a></li>
-                                <li><a onclick="openFormLogin()">Đăng nhập</a></li>
+                                <li><a onclick="openFormLogin(); scrollToTop()">Đăng nhập</a></li>
                                 <li><a>Đăng xuất</a></li>
                             </ul>
                         </div>
@@ -249,7 +248,7 @@
             </div>    
             <!--Kết Thúc Phần Tab Body-->
             <div id="adminlogin" class="admin-login">
-                <i onclick="closeForm()" class="form-cancel fas fa-times" id="btncancel"></i>
+                <i onclick="closeFormLogin()" class="form-cancel fas fa-times" id="btncancel"></i>
                 <div class="tab-header"><div><i class="forgotpassword__form"></i><b>ĐĂNG NHẬP</b></div></div>
                 <Center><div class="tab-indicator"></div></Center>
                 <div class="tab-body">
