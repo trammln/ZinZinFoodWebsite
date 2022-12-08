@@ -104,6 +104,10 @@ body{
     border-radius: 5px;
     color: white;
 }
+.navigationtab li a {
+    color: white;
+    font-weight: bold;  
+}
 .navigationtab li:hover {
     background-color: #DF805D;
   }
