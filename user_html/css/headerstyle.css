@@ -1,0 +1,314 @@
+body{
+    margin: 0px;
+}
+.header{
+    background-color:#BD3213;
+    background-size: cover;
+    padding: 5px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* Detail ------------------------------------- */
+
+/* Search bar -------------- */
+/* Logo --------------*/
+.logo{
+    position: relative;
+    display: flex;
+    align-self: flex-start;
+    align-items: center;
+}
+.logotitle{
+    height: 25px;
+    width: auto;
+    margin-left: 10px;
+}
+.logokey{
+    height: 70px;
+    width: auto;
+}
+/* Search area-------- */
+.header-menu-bar-hid{
+    display: none;
+}
+
+.searchbar{
+    display: flex;
+    position: relative;
+    align-items: center;
+    vertical-align: middle;
+    justify-content: center;
+    margin: 10px 0px 0px 0px  
+}
+
+.inputbox-search {
+    position: relative;
+    width: 700px;
+    height: 40px;
+    background-color: #fff;
+    border-style: none;
+    border-radius: 5px 0px 0px 5px;
+    margin-left: 20px;
+    padding-left: 10px;
+    /* box-shadow: 2px 2px #7c7c7c; */
+}
+
+.search_box{
+    display: flex;
+    flex-direction: row;
+}
+.button_search_group{
+    min-width: 10%;
+    align-items: center;
+    vertical-align: middle;
+}
+.Search_Button{
+    position: relative;
+    width: 50px;
+    background-color: #eee;
+    height: 40px;
+    border-style: none;
+    border-radius: 0px 5px 5px 0px;
+}
+.button_search_group i{
+    font-size: 20px;
+}
+
+.tool-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    vertical-align: middle;
+    justify-content: center; 
+}
+
+.tool-group i{
+    color: white;
+    font-size: 35px;
+    margin: 0px 20px 0px 10px;
+}
+
+/* Navigationtab -------------*/
+.navigationtab{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin: 0px;
+}
+.navigationtab li{
+    margin: 0px 20px 0px 0px;
+    font-size: 16px;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+}
+.navigationtab li:hover {
+    background-color: #DF805D;
+  }
+
+/* User icon ======================================== */
+
+.header-user-box{
+    display: flex;
+}
+.user-options {
+    display: none;
+}
+.header-user-icon-div:hover + .user-options{
+    display: flex;
+    }
+
+
+.header-user-icon-div{
+    color: white;
+    font-size: 25px;
+    justify-self: center;
+  }
+
+  .header-user-icon-div i{
+    padding-top: 7px;
+  }
+
+  #header-user{
+    display: none;
+  }
+
+  .user-options{
+    /* display: block; */
+    list-style-type: none;
+    background-color: #fff;
+    position: absolute;
+    width: 100px;
+    font-size: 14px;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 6px 1px #eee;
+    z-index: 99;
+    left: 0;
+  }
+
+  .user-options li{
+    display: list-item;
+    text-align: left;
+    padding: 7px;
+  }
+
+  .user-options li:hover{
+    background-color: #BD3213;
+    color:rgb(255, 255, 255);
+    font-weight: bold;
+  }
+  
+  #header-user:checked ~ .user-options{
+    display: block;
+  }
+
+  /* Chỉnh vị trí cho ô Đăng nhập đăng ký sát vào tài khoản */
+
+    .header-user-box {
+        position: relative;
+    }
+    .user-options{
+        position: absolute;
+        left: 10px;
+        top: 45px;
+    }
+
+
+  @media only screen and (max-width: 1200px) {
+    .inputbox-search {
+        position: relative;
+        width: 300px;
+    }
+    
+    .logo{
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+    .logotitle{
+        height: 20px;
+        width: auto;
+        margin-left: 10px;
+    }
+    .logokey{
+        height: 50px;
+        width: auto;
+    }
+
+    .tool-group{
+        color: white;
+        font-size: 25px;
+        margin: 0px 10px 0px 10px;
+    }
+    
+    
+}
+
+@media only screen and (max-width: 700px) {
+    .searchbar{
+        display: flex;
+        flex-direction: column;
+    }
+    .search_box{
+        display: flex;
+        flex-direction: row;
+    }
+    .inputbox-search {
+        position: relative;
+        width: 300px;
+    }
+
+    .tool-group{
+        display: none;
+    }
+
+    
+
+    /* Custome menu bar thu gọn -------------------------- */
+    .header-menu-bar-hid{
+        display: flex;
+        
+    }
+    .header-format-icon-bar{
+        color: white;
+        font-size: 25px;
+        justify-self: center;
+        padding: 0px 18px 7px;
+      }
+
+      .header-format-icon-bar i{
+        padding-top: 7px;
+      }
+
+      #check-menu-header{
+        display: none;
+      }position
+
+      .div-header-list-menu{
+        display: none;
+      }
+
+      .div-header-list-menu{
+        display: none;
+        list-style-type: none;
+        background-color: #fff;
+        position: absolute;
+        width: 180px;
+        font-size: 14px;
+        border: 1px solid #eee;
+        box-shadow: 0 2px 6px 1px #eee;
+        z-index: 99;
+        left: 0;
+        margin-top: 47px;
+      }
+    
+      .div-header-list-menu li{
+        display: list-item;
+        text-align: left;
+        padding: 7px;
+      }
+    
+      .div-header-list-menu li:hover{
+        background-color: #BD3213;
+        color:rgb(255, 255, 255);
+        font-weight: bold;
+      }
+      
+      #check-menu-header:checked ~ .div-header-list-menu{
+        display: block;
+      }
+      
+      /* Ẩn nav bar cũ */
+      .navigationbar{
+        display: none;
+      }
+}
+
+@media only screen and (max-width: 500px) {
+    .button_search_group{
+        min-width: 10%;
+        align-items: center;
+        vertical-align: middle;
+    }
+    .Search_Button{
+        position: relative;
+        width: 30px;
+        height: 32px;
+        border-style: none;
+        border-radius: 0px 5px 5px 0px;
+    }
+    .button_search_group i{
+        font-size: 20px;
+    }
+
+    .inputbox-search {
+        position: relative;
+        width: 150px;
+        height: 30px;
+        border-style: none;
+        border-radius: 5px 0px 0px 5px;
+        /* box-shadow: 2px 2px #7c7c7c; */
+    }
+}
