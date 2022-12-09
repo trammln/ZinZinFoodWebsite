@@ -101,10 +101,15 @@
 }
 
 /* CHUNG CHO 3 Ô ĐỊA CHỈ, VOUCHER, NOTES */
-.horizontalarea_2 div:hover{
+/* .horizontalarea_2 div:hover{
     background-color: #BD3213;
     color: white;
-}
+} */
+
+/* .horizontalarea_2 div:hover + .payment-input-box1{
+    background-color: #BD3213;
+    color: white;
+} */
 
 /* Địa chỉ -------------------------------- */
 .title{

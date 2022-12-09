@@ -336,7 +336,7 @@
                     <!-- Lựa chọn phương thức thanh toán -->
                     <div class="column2_paymentchoice">
                         <h3>Lựa chọn phương thức thanh toán</h3>
-                        <form class="paymentchoice_form">
+                        <form class="paymentchoice_form" name="paymentchoice_form">
                             <div><input type="radio" class="rad_visa" name="payment_method"> Visa/Mastercard <br></div>
                             <div><input type="radio" class="rad_cash" name="payment_method"> Thanh toán tiền mặt <br></div>
                             <div><input type="radio" class="rad_bank" name="payment_method"> Thanh toán qua thẻ ngân hàng <br></div>
@@ -352,11 +352,11 @@
                         <h3 class="title">Nhập địa chỉ giao hàng:</h3>
                         <div class="inputbox">
                             <form>
-                                <input class="payment-input-box1" type="text" class="input_form" placeholder="Nhập địa chỉ giao hàng bạn mong muốn">
+                                <input class="payment-input-box1" id="delivery-addr" type="text" placeholder="Nhập địa chỉ giao hàng bạn mong muốn">
                             </form>
                         </div>
                         <div class="deliv_define">
-                            <form class="delivchoice_form" id="deliv_form" onchange="count_deliv_fee()">
+                            <form class="delivchoice_form" id="deliv_form" name="deliv_form" onchange="count_deliv_fee()">
                                 <div><input type="radio" id="deliv_onsite" name="payment_method" onchange="count_deliv_fee()" value="Lấy hàng tại kho">Lấy hàng tại kho<br></div>
                                 <div><input type="radio" id="deliv_HCM" name="payment_method" onchange="count_deliv_fee()" value="Giao hàng trong TP HCM">Giao hàng trong TP HCM<br></div>
                                 <div><input type="radio" id="deliv_nationwide" name="payment_method" onchange="count_deliv_fee()" value="Giao hàng trên toàn quốc">Giao hàng trên toàn quốc<br></div>
@@ -371,7 +371,7 @@
                                 <input class="payment-input-box" id="payment-input-voucher" type="text" class="input_form" placeholder="Nhập mã voucher tại đây" onchange="count_discount()">
                             </form> -->
 
-                            <select id="voucher" class="payment-input-box1" id="payment-input-voucher" type="text" class="input_form" onchange="count_discount()">
+                            <select id="voucher" class="payment-input-box1" id="payment-input-voucher" type="text" onchange="count_discount()">
                                 <option value="VC0">Không</option>
                                 <option value="VC1">Voucher giảm giá 10.000đ</option>
                                 <option value="VC2">Voucher giảm giá 20.000đ</option>
@@ -387,7 +387,7 @@
                         <h3 class="title">Để lại lời nhắn:</h3>
                         <div class="inputbox">
                             <form>
-                                <input class="payment-input-box1" type="text" class="input_form" placeholder="Để lại lời nhắn tại đây">
+                                <input class="payment-input-box1" type="text" placeholder="Để lại lời nhắn tại đây">
                             </form>
                         </div>
                     </div>
@@ -417,7 +417,7 @@
 
                         <div class="submit_btn">
                             <form>
-                                <input type="submit" value="ĐẶT HÀNG">
+                                <input type="submit" value="ĐẶT HÀNG" onclick="DatHang()">
                             </form>
                         </div>
                     </div>

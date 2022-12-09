@@ -40,3 +40,19 @@ function TinhTongTien(draft,giamgia,vanchuyen){
     var thanhtien = draft - giamgia + vanchuyen;
     return thanhtien;
 }
+
+function DatHang(){
+    // var getSelectedValue = document.querySelector( 'input[name="paymentchoice_form"]:checked');   
+    // if(getSelectedValue == null) {   
+    //     alert("Vui lòng chọn phương thức thanh toán");
+    // } 
+
+    // var getSelectedValue1 = document.querySelector( 'input[name="deliv_form"]:checked');   
+    // if(getSelectedValue1 == null) {   
+    //     alert("Vui lòng chọn khu vực giao hàng!");}
+        
+    // var getSelectedValue2 = document.getElementById("delivery-addr").value;   
+    // if(getSelectedValue2 == null) {   
+    //     alert("Vui lòng nhập địa chỉ!");} 
+    alert("Bạn đã đặt hàng thành công!")
+}
