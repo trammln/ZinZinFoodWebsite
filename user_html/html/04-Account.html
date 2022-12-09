@@ -1,25 +1,30 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-        <title>Zin Zin Food Header</title>
-        
-    </head>
-    <body>
+<html lang="en">
+<head>
+  <title>Hồ sơ của tôi</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../css/04-Account.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+</head>
+<body class="mybody">
+<!--=======================HEADER=========================-->
+    <div id="header">
         <div class="header">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
             <link rel="stylesheet" href="../css/headerstyle.css">
             
             <div class="searchbar">
                 <div class="logo">
-                    <a href="02-Homepage.html"  title="Zin Zin Food"><img class="logokey" src="../image/logo/whitelogo.png" alt="logo" ></a>
-                    <a href="02-Homepage.html" title="Zin Zin Food"><img class="logotitle" src="../image/logo/whitetitle.png" alt="logotitle" ></a>
+                    <a href="../html/02-Homepage.html"  title="Zin Zin Food"><img class="logokey" src="../image/logo/whitelogo.png" alt="logo" ></a>
+                    <a href="../html/02-Homepage.html" title="Zin Zin Food"><img class="logotitle" src="../image/logo/whitetitle.png" alt="logotitle" ></a>
                 </div>
                 <div class="search_box">
                 
@@ -42,12 +47,17 @@
                         </ul>
                         </div>
                     </div>
-        
+
+                    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+                    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+                    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
              <form onsubmit="submitForm(event)">
                             <div><input class="inputbox-search" data-view-id="main_search_from_input" type="text" value placeholder="Tìm kiếm đồ ăn vặt" id="inputvalue"></div>
                         </div> 
                         <!-- <input data-view-id="main_search_from_button" class="Search_Button" type="submit" title="Tìm kiếm" /> -->
-                        <div class="button_search_group">
+                        <div class="button_search_group" style="min-width: 0px;">
                             <button data-view-id="main_search_from_button" class="Search_Button">
                                 <i class="fa fa-search" aria-hidden="true"></i></button>
                         </div>
@@ -146,7 +156,7 @@
                         } 
                             </script>      
                 <div class="tool-group">
-                    <a href="09-Cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                    <a href="../html/09-Cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
                     <i class="fa fa-bell" aria-hidden="true"></i>
                     <!-- <i class="fa fa-user" aria-hidden="true"></i> -->
         
@@ -158,7 +168,7 @@
                             </div>
                         </label>             
                         <div class="user-options">
-                                <li ><a href="04-Account.html" id="header-account">Cá nhân</a></li>
+                                <li><a href="../html/04-Account.html">Cá nhân</a></li>
                                 <li><a onclick="openFormLogin(); scrollToTop()">Đăng nhập</a></li>
                                 <li><a>Đăng xuất</a></li>
                             </ul>
@@ -241,7 +251,7 @@
                             <span>*<input class="register__form-input" type="password" placeholder="Xác nhận mật khẩu" id="passwordagain"/></span>
                             <i onclick="togglepass2()" id="showbtn2" class="fas fa-eye" aria-hidden="true" fill="none"></i>
                         </div>
-                        <p class="register-AgreedLicense"><input type="checkbox" name="agreedlicense" required> Đã xác nhận <a href="11-Policy.html">các điều khoản chính sách</a> của ZinZin Food.</p>
+                        <p class="register-AgreedLicense"><input type="checkbox" name="agreedlicense" required> Đã xác nhận <a href="">các điều khoản chính sách</a> của ZinZin Food.</p>
                         <button class="register__form-submit" id="btnregister" name="btnregister" type="submit">Đăng ký</button>
                     </form>
                 </div>            
@@ -301,6 +311,168 @@
                 </form>
             </div>    
         </div>
-    </body>
-    <script src="../javascript/login.js"></script>
+        <script src="../javascript/login.js"></script>
+      </div>
+<!--======================BODY=========================-->
+    <div class="container" style="margin-top: 165px; margin-bottom: 40px;">
+    <div class="row">
+            <div class="slidebar col-sm-3" style="padding: 0px;">
+                <h3 style="padding-bottom: 5px;">Quản lý cá nhân</h3>
+                <button class="dropdown_btn"><i class="fas fa-user" ></i> Tài khoản của tôi<i class="fa fa-caret-down"></i></button>
+                                <div class="dropdown-container">
+                                    <a href="../html/04-Account.html">Hồ sơ của tôi</a>
+                                    <a href="#">Ngân hàng và ví điện tử</a>
+                                    <a href="#">Địa chỉ</a>
+                                    <a href="#">Đổi mật khẩu</a>
+                                </div>
+                                <a href="#"><i class="fas fa-wallet"></i> Đơn mua</a>
+                                <a href="#"><i class="fas fa-ticket"></i> Voucher của tôi</a>
+                                <a href="#"><i class="fas fa-id-card"></i> Khách hàng thân thiết</a>
+                                <a href="../html/13-Setting.html" ><i class="fas fa-cog"></i> Cài đặt</a>
+                                <a href="#" style="border: none;"><i class=" fas fa-sign-out"></i> Đăng xuất</a>
+            </div>
+            <div class="content col-sm-9">
+            <h3 style="padding-top: 5px;">Hồ sơ của tôi</h3>
+                <table class="noiDung">
+                    <tr>
+                        <td class="ThongTin"> Tên đăng nhập: </td>
+                        <td> thuyank20411uel <a href="">Thay đổi</a></td>
+                    </tr>
+                    <tr>
+                        <td class="ThongTin"> Họ Và Tên: </td>
+                        <td><input type="text" value="Đinh Thị Thúy An"></td>
+                    </tr>
+                    <tr>
+                        <td class="ThongTin"> Email: </td>
+                        <td>andtt20411@st.uel.edu.vn <a href="">Thay đổi</a></td>
+                    </tr>
+                    <tr>
+                        <td class="ThongTin"> Số Điện Thoại: </td>
+                        <td>0971754062 <a href="">Thay đổi</a></td>
+                    </tr>
+                    <tr>
+                        <td class="ThongTin"> Giới tính: </td>
+                        <td>
+                            <input type="radio" name="GioiTinh"> Nam 
+                            <input type="radio" name="GioiTinh" checked="checked"> Nữ
+                            <input type="radio" name="GioiTinh"> Khác
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ThongTin"> Ngày sinh: </td>
+                        <td >
+                            <select>
+                                <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option><option>13</option><option>14</option><option>15</option><option>16</option><option>17</option><option>18</option><option>19</option><option>20</option>v<option>21</option><option>22</option><option>23</option><option>24</option><option>25</option><option>26</option><option>27</option><option>28</option><option>29</option><option>30</option><option>31</option>
+                            </select>
+                            <select>
+                            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option>
+                            </select>
+                            <select>
+                            <option>2001</option><option>2002</option><option>2003</option><option>2004</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><button id="btnLuu">Lưu</button></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var dropdown = document.getElementsByClassName("dropdown_btn");
+        var i;
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "block";
+                }
+            });
+        }
+    </script>
+<!-- ===================FOOTER========================= -->
+<div class="footer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/footerstyle.css">
+
+    <div class="submission_area">
+        <div class="text_guide">
+            <div class="title">Đăng ký theo dõi</div>
+            <div class="content">Đừng bỏ lỡ hàng ngàn sản phẩm và khuyến mãi cực hấp dẫn.</div>
+        </div>
+        <div class="box_input_group">
+            <input class="inputbox" type="text" placeholder="Nhập email của bạn...">
+            <input class="submit" type="submit" value="Đăng ký">
+        </div>
+    </div>
+
+    <div class="footer_content_area">
+        <div class="about_zinzin_area">
+            <div class="about_zinzin_texttitle">VỀ ZIN ZIN FOOD</div>
+            <ul class="about_zinzin_detail">
+                <li><a>CÁC CÂU HỎI THƯỜNG GẶP</a></li>
+                <li><a>GỬI YÊU CẦU HỖ TRỢ</a></li>
+                <li><a>HƯỚNG DẪN ĐẶT HÀNG</a></li>
+                <li><a>PHƯƠNG THỨC VẬN CHUYỂN</a></li>
+                <li><a>CHÍNH SÁCH ĐỔI TRẢ</a></li>
+                <li><a>HỖ TRỢ KHÁCH HÀNG: HOTRO@ZINZIN.VN</a></li>
+                <li><a>BÁO LỖI BẢO MẬT SECURITY@ZINZIN.VN</a></li>
+            </ul>
+        </div>
+
+        <div class="payment_area">
+            <div class="payment_texttitle">PHƯƠNG THỨC THANH TOÁN</div>
+            <ul class="payment_detail">
+                <li class="visa"><a><i class="fa fa-cc-visa" aria-hidden="true"></i></a></li>
+                <li class="momo"><a><img src="../image/footer/momo1.png" alt="momo"></a></li>
+                <li class="bank"><a><i class="fa fa-university" aria-hidden="true"></i></a></li>
+                <li class="cash"><a><i class="fa fa-money" aria-hidden="true"></i></a></li>
+                
+            </ul>
+
+            <div class="footer_credit_area">
+                <div class="logo_credit">
+                    <img class="logo-footer" src="../image/logo/whitelogo.png" alt="logo">
+                    <img src="../image/footer/credit.png" alt="BoCongThuong">
+                </div>
+                <div class="credit_bytext">COPYRIGHT 	&#169; 2022 ZIN ZIN FOOD ALL RIGHT RESESERVED</div>
+                
+            </div>
+        </div>
+
+        <div class="Col3_connect_app">
+            <div class="connect_area">
+                <div class="connect_us_texttitle">KẾT NỐI VỚI CHÚNG TÔI</div>
+                <ul class="social_media_detail">
+                    <li class="facebook"><a href="https://www.facebook.com/ZinZinFoodst"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+                    <li class="tiktok"><a href="https://www.tiktok.com/@zinzinfood"><img src="../image/footer/tiktok.png" alt="tiktok"></a></li>
+                    <li class="email"><a href="zinzinfood.contact@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+
+            <div class="download_app_area">
+                <div class="download_app_texttitle">TẢI ỨNG DỤNG TRÊN ĐIỆN THOẠI DI ĐỘNG</div>
+                <ul class="download_app_detail">
+                    <li><a><img src="../image/footer/qr.png" alt="qrcode"></a></li>
+                    <li><a><img src="../image/footer/gg_play.png" alt="chplay"></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-4-message">
+        
+            <div class="chat_area">
+                <i><img src="../image/footer/messenger.png" alt="messenger" ></i>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</body>
 </html>
