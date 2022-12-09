@@ -195,6 +195,9 @@ div.box_input_group{
 /* chat area --------------------------- */
 .col-4-message{
     display: flex;
+    top: 80%;
+    right: 20px;
+    position: fixed;
     flex-direction: row;
     vertical-align: center;
     justify-items: center;
@@ -213,7 +216,7 @@ div.box_input_group{
 .fwd_area{
     height: 50px;
     width: 50px;
-    background-color: white;
+    background-color: black;
     border-radius: 10px;
     box-shadow: 0 1px 1px rgba(0,0,0,0.12),
             0 2px 2px rgba(0,0,0,0.12),
@@ -223,11 +226,10 @@ div.box_input_group{
 }
 
 .fwd_area i{
-    position:fixed;
     grid-column: 3;
     display: flex;
     font-size: 50px;
-    color: #BD3213;
+    color: white;
     justify-content: center;
     vertical-align: center;
     align-items: center;
