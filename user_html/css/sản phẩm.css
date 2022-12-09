@@ -157,14 +157,16 @@ ul.products li #product_price{
   margin-left: 3px;
 }
 ul.products li #diachi{
-  font-size: 14px;
-  margin-top: 10px;
+  font-size: 13px;
+  margin-top: 15px;
   margin-left: 3px;
+  color: #41105c;
 }
 ul.products li #luotmua{
   font-size: 12px;
   margin-left: 70%;
   margin-bottom: 5px;
+  color: #41105c;
 }
 .product_item{
   background-color:#ffffff;
