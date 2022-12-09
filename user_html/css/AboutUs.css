@@ -9,11 +9,11 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 .body {
-    margin-top: 120px;
+    margin-top: 130px;
     width: 100%;
 }
 .body > div{
-    padding: 20px 100px;
+    padding: 10px 100px;
 }
 .body >div >div >img {
     height: 400px;
@@ -21,14 +21,14 @@
 }
 .Introduce--Title {
     text-align: justify;
-    margin-top: 20px;
+    margin-top: 10px;
 
 }
 .Introduce--Title h1{
     color: #BD3213;
     font-weight: bold;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 .Introduce--Title-image {
     position: relative;
@@ -44,7 +44,7 @@
 .Introduce--Brand h2{
     color: #ffffff;
     font-weight: bold;
-    margin: 20px 0;
+    margin: 10px 0px 0px 0px;
 }
 .Introduce--Brand h3{
     color: #ffffff;
@@ -63,7 +63,7 @@
 .Introduce--Value h2{
     font-weight: bold;
     color: #BD3213;
-    margin: 20px 0;
+    margin: 10px 0px 0px 0px;
 }
 .Introduce--Value h3{
     font-weight: bold;
@@ -72,14 +72,14 @@
 }
 .Introduce--Service {
 
-    margin: 20px 0px;
+    margin: 10px 0px;
     background-color: #BD3213;
     color: #ffffff;
 }
 .Introduce--Service h2{
     color: #ffffff;
     font-weight: bold;
-    margin: 20px 0;
+    margin: 10px 0px 0px 0px;
 }
 .Introduce--Service-content h3{
     font-weight: bold;
@@ -122,7 +122,7 @@
     padding: 5px 10px;
     border: 0;
     outline: 0;
-    margin: 20px 0;
+    margin: 10px 0;
 }
 .Introduce--Service-content button > a{
     text-transform: uppercase;
@@ -138,7 +138,7 @@
     width: 100%;
 }
 .Table-Introduce--Value-value{
-    padding: 20px;
+    padding: 10px;
     width: 100%;
     font-weight: bold;
     color: #BD3213;
@@ -152,7 +152,7 @@
 }
 .Table-Introduce--Value-value {
     justify-content: center;
-    margin: 20px 0px;
+    margin: 10px 0px;
 }
 .Table-Introduce--Value-value img {
     margin: 0px 10px;
@@ -216,7 +216,7 @@
     position: relative;
     text-align: justify;
     font-weight: bold;
-    margin: 20px 0px 20px 0px;
+    margin: 10px 0px 10px 0px;
     z-index: 1;
     text-transform: none;
     line-height: 1.5;
@@ -233,7 +233,7 @@
 .Introduce--Human h2{
     color: #BD3213;
     font-weight: bold;
-    margin: 20px 0px;
+    margin: 10px 0px 0px 0px;
 }
 .Table-Introduce--Human {
     width: 100%;
@@ -272,10 +272,11 @@
         font-size: 14px;
     }
     .body{
+        margin-top: 110px;
         width: 100%;
     }
     .body > div{
-        padding: 20px 40px;
+        padding: 10px 40px;
     }
     .body >div >div >img {
         height: 320px;
@@ -326,6 +327,7 @@
     }
     .body{
         width: 100%;
+        margin-top: 150px;
     }
     .body > div{
         padding: 10px 20px;
