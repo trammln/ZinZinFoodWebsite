@@ -18,6 +18,11 @@ body{
     src: url(Font\Roboto-Regular.ttf);
     font-weight: lighter;
   } */
+
+a {
+    text-decoration: none;
+    color: white;
+}
 /* Content area ------------------------------------------------*/
 
 .footer_content_area {
@@ -43,6 +48,12 @@ body{
     text-align: center;
     justify-content: center;
     align-items: center;
+    vertical-align: middle;
+}
+
+.momo img {
+    padding-top: 3px;
+    margin-left: 5px;
 }
 
 .payment_texttitle{
@@ -87,6 +98,10 @@ body{
     max-height: 30px;
     width: auto;
     margin: 5px;
+}
+
+.social_media_detail .tiktok{
+    padding-top: 5px;
 }
 
 .social_media_detail i{
