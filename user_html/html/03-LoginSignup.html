@@ -12,6 +12,7 @@
 </head>
 <body ng-app="angularApp">
     <div id="tab" class="tab">
+        <div id="header"></div>
         <i id="top" onclick="Close()" class="form-close fas fa-times" id="btncancel"></i>
         <!--Bắt Đầu Phần Tab Header-->
         <div class="tab-header">
@@ -100,7 +101,18 @@
             </div>
         </div>
     </div>
-    <script src="../javascript/login.js">
+    <div id="footer"></div>
+    <script src="../javascript/login.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous">
     </script>
+    <script> 
+    $(function(){
+      $("#header").load("01-Header.html"); 
+      $("#footer").load("02-Footer.html"); 
+    });
+    </script> 
 </body>
 </html>
