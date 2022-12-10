@@ -11,9 +11,9 @@
     <title>Tài khoản | ZinZin Food - Đồ ăn vặt ZinZin</title>
 </head>
 <body ng-app="angularApp">
-    <div id="tab-container">
+    <div id="tab-container1">
         <div id="tab" class="tab">
-            <i id="top"></i>
+            <i style="display: none;" id="top"></i>
             <i onclick="Close()" class="form-close fas fa-times" id="btncancel"></i>
             <!--Bắt Đầu Phần Tab Header-->
             <div class="tab-header">
@@ -95,9 +95,9 @@
                             <input class="login__form-input" type="password" placeholder="Mật khẩu" id="adminpassword">
                             <i onclick="togglepass3()" id="showbtn3" class=" fas fa-eye" aria-hidden="true" fill="none"></i>
                         </div>
-                        <p class="login-LostPassword lost_password"><a onclick="openFormForgot()" id="linkforgotpassword">Quên mật khẩu </a></p>
+                        <p class="login-LostPassword lost_password"><a href="03-ForgotPassword.html" id="linkforgotpassword">Quên mật khẩu </a></p>
                         <button class="login__form-submit" id="btnadminlogin" name="btnlogin" type="submit">Đăng nhập</button>
-                        <p class="login__form-admin"><a href="#top">Đăng nhập tài khoản khách hàng</a></p>                  
+                        <p class="login__form-admin"><a onclick="returnlogin()" href="#top">Đăng nhập tài khoản khách hàng</a></p>                  
                     </form>
                 </div>
             </div>

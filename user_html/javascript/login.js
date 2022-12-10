@@ -17,26 +17,35 @@ for (let i = 0; i < tabsPane.length; i++) {
 function scrollToTop() {
                window.scrollTo(0, 0);
             }
+    
+function returnlogin() {
+    document.getElementById("top").style.removeProperty('display');
+    scrollToTop();
+}
 
 function openFormLogin() {
-    document.getElementById("tab1").style.display = "none";
-    document.getElementById("tab").style.display = "block";
+    document.getElementById("tab-container2").style.display = "none";
+    document.getElementById("tab-container1").style.display = "block";
     document.body.style.setProperty('overflow', 'hidden');
+    document.body.style.backgroundColor = 'rgb(0, 0, 0, 0.4)';
   }
   
 function closeFormLogin() {
-    document.getElementById("tab").style.display = "none";
+    document.getElementById("tab-container1").style.display = "none";
+    document.body.style.removeProperty('background-color');
     document.body.style.removeProperty('overflow');
   } 
 
   function openFormForgot() {
-    document.getElementById("tab").style.display = "none";
-    document.getElementById("tab1").style.display = "block";
-    document.body.style.removeProperty('overflow');
+    document.getElementById("tab-container1").style.display = "none";
+    document.getElementById("tab-container2").style.display = "block";
+    document.body.style.setProperty('overflow', 'hidden');
+    document.body.style.backgroundColor = 'rgb(0, 0, 0, 0.4)';
   }
   
   function closeFormForgot() {
-    document.getElementById("tab1").style.display = "none";
+    document.getElementById("tab-container2").style.display = "none";
+    document.body.style.removeProperty('background-color');
     document.body.style.removeProperty('overflow');
   }
 

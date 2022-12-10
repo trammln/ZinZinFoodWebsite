@@ -179,128 +179,134 @@
             </div>
         </div> 
         <link rel="stylesheet" href="../css/loginsignup.css">
-        <div style="display: none;" id="tab" class="tab">
-            <i id="top" onclick="closeFormLogin()" class="form-close fas fa-times" id="btncancel"></i>
-            <!--Bắt Đầu Phần Tab Header-->
-            <div class="tab-header">
-                <div class="active"><i class="login__form"></i><b>ĐĂNG NHẬP</b></div>
-                <div></div>
-                <div><i class="register__form"></i><b>ĐĂNG KÝ</b></div>
-            </div>
-            <!--Kết Thúc Phần Tab Header-->
-            <div class="tab-indicator"></div>
-             <!--Bắt Đầu Phần Tab Body-->
-            <div class="tab-body">
-                <div id="login" class="active" role="tabpanel">
-                    <form onsubmit="LogIn()" id="login-form" class="login__form-login" method="post">
-                        <h3>ĐĂNG NHẬP TÀI KHOẢN</h3>
-                        <p class="sub-title">Vui lòng nhập thông tin tài khoản để đăng nhập.</p>
-                        <table class="login-with-social">
-                            <td><button type="button" class=login-with-facebook-button>
-                                <a href="https://www.facebook.com/" class="login__btn">
-                                    <span class="login__btn-image">
-                                        <img src="../image/Login/facebook.png" width="20px" height="20px"  alt="" class="login__btn-logo">
-                                    </span>
-                                    <span class="login__btn-text">Facebook</span>
-                                </a>
-                            </button></td>
-                            <td><button type="button" class=login-with-google-button>
-                                <a href="https://www.google.com/" class="login__btn"> 
-                                    <span class="login__btn-image">
-                                        <img src="../image/Login/google.png" alt="" width="20px" height="20px" class="login__btn-logo">
-                                    </span>
-                                    <span class="login__btn-text">Google</span>
-                                </a>
-                            </button></td>
-                        </table>
-                        <input id="username" class="login__form-input" type="text" placeholder="Email hoặc Số điện thoại" autofocus><br>
-                        <div class="login__form-wrapper">
-                            <input class="login__form-input" type="password" placeholder="Mật khẩu" id="password">
-                            <i onclick="togglepass()" id="showbtn" class=" fas fa-eye" aria-hidden="true" fill="none"></i>
-                        </div>
-                        <p class="login-LostPassword lost_password"><a style="text-decoration: underline; cursor: pointer;" onclick="openFormForgot()" id="linkforgotpassword">Quên mật khẩu </a></p>
-                        <button class="login__form-submit" id="btnlogin" name="btnlogin" type="submit">Đăng nhập</button>
-                        <p class="login__form-admin"><a href="#adminlogin">Đăng nhập tài khoản admin</a></p>
-                    </form>
+        <div style="display: none;" id="tab-container1">
+            <div id="tab" class="tab">
+                <i style="display: none;" id="top"></i>
+                <i onclick="closeFormLogin()" class="form-close fas fa-times" id="btncancel"></i>
+                <!--Bắt Đầu Phần Tab Header-->
+                <div class="tab-header">
+                    <div class="active"><i class="login__form"></i><b>ĐĂNG NHẬP</b></div>
+                    <div></div>
+                    <div><i class="register__form"></i><b>ĐĂNG KÝ</b></div>
                 </div>
-    
-               <div id="register" role="tabpanel">
-                    <form onsubmit="Register()" id="register-form" class="register__form-register" method="post">
-                        <h3>ĐĂNG KÝ TÀI KHOẢN</h3>
-                        <p class="sub-title">Vui lòng nhập thông tin của bạn để đăng ký.</p>
-                        <div class="register__form-wrapper">
-                            <span>*<input class="register__form-input" type="text" placeholder="Địa chỉ email" id="resemail" autofocus></span>
-                        </div>
-                        <div class="register__form-wrapper">
-                            <span>*<input class="register__form-input" type="text" placeholder="Số điện thoại" id="resphone"></span>
-                        </div>
-                        <div class="register__form-wrapper">
-                            <span>*<input class="register__form-input" type="password" placeholder="Mật khẩu" id="respassword"/></span>
-                            <i onclick="togglepass1()" id="showbtn1" class="fas fa-eye" aria-hidden="true" fill="none"></i>
-                        </div>
-                        <div class="register__form-wrapper">
-                            <span>*<input class="register__form-input" type="password" placeholder="Xác nhận mật khẩu" id="passwordagain"/></span>
-                            <i onclick="togglepass2()" id="showbtn2" class="fas fa-eye" aria-hidden="true" fill="none"></i>
-                        </div>
-                        <p class="register-AgreedLicense"><input type="checkbox" name="agreedlicense" required> Đã xác nhận <a href="11-Policy.html">các điều khoản chính sách</a> của ZinZin Food.</p>
-                        <button class="register__form-submit" id="btnregister" name="btnregister" type="submit">Đăng ký</button>
-                    </form>
-                </div>            
-            </div>    
-            <!--Kết Thúc Phần Tab Body-->
-            <div id="adminlogin" class="admin-login">
-                <i onclick="closeFormLogin()" class="form-cancel fas fa-times" id="btncancel"></i>
-                <div class="tab-header"><div><i class="forgotpassword__form"></i><b>ĐĂNG NHẬP</b></div></div>
-                <Center><div class="tab-indicator"></div></Center>
+                <!--Kết Thúc Phần Tab Header-->
+                <div class="tab-indicator"></div>
+                 <!--Bắt Đầu Phần Tab Body-->
                 <div class="tab-body">
-                    <form action="#" id="admin-login-form" class="login__form-adminlogin" method="get">
-                        <h3>ĐĂNG NHẬP ADMIN</h3>
-                        <p class="sub-title">Vui lòng nhập thông tin tài khoản admin để đăng nhập.</p>
-                        <input id="adminusername" class="login__form-input" type="text" placeholder="Email hoặc Số điện thoại" autofocus><br>
-                        <div class="login__form-wrapper">
-                            <input class="login__form-input" type="password" placeholder="Mật khẩu" id="adminpassword">
-                            <i onclick="togglepass3()" id="showbtn3" class=" fas fa-eye" aria-hidden="true" fill="none"></i>
-                        </div>
-                        <p class="login-LostPassword lost_password"><a style="text-decoration: underline; cursor: pointer;" onclick="openFormForgot()" id="linkforgotpassword">Quên mật khẩu </a></p>
-                        <button class="login__form-submit" id="btnadminlogin" name="btnlogin" type="submit">Đăng nhập</button>
-                        <p class="login__form-admin"><a href="#top">Đăng nhập tài khoản khách hàng</a></p>                  
-                    </form>
+                    <div id="login" class="active" role="tabpanel">
+                        <form onsubmit="LogIn()" id="login-form" class="login__form-login" method="post">
+                            <h3>ĐĂNG NHẬP TÀI KHOẢN</h3>
+                            <p class="sub-title">Vui lòng nhập thông tin tài khoản để đăng nhập.</p>
+                            <table class="login-with-social">
+                                <td><button type="button" class=login-with-facebook-button>
+                                    <a href="https://www.facebook.com/" class="login__btn">
+                                        <span class="login__btn-image">
+                                            <img src="../image/Login/facebook.png" width="20px" height="20px"  alt="" class="login__btn-logo">
+                                        </span>
+                                        <span class="login__btn-text">Facebook</span>
+                                    </a>
+                                </button></td>
+                                <td><button type="button" class=login-with-google-button>
+                                    <a href="https://www.google.com/" class="login__btn"> 
+                                        <span class="login__btn-image">
+                                            <img src="../image/Login/google.png" alt="" width="20px" height="20px" class="login__btn-logo">
+                                        </span>
+                                        <span class="login__btn-text">Google</span>
+                                    </a>
+                                </button></td>
+                            </table>
+                            <input id="username" class="login__form-input" type="text" placeholder="Email hoặc Số điện thoại" autofocus><br>
+                            <div class="login__form-wrapper">
+                                <input class="login__form-input" type="password" placeholder="Mật khẩu" id="password">
+                                <i onclick="togglepass()" id="showbtn" class=" fas fa-eye" aria-hidden="true" fill="none"></i>
+                            </div>
+                            <p class="login-LostPassword lost_password"><a style="text-decoration:underline; cursor: pointer;" onclick="openFormForgot()" id="linkforgotpassword">Quên mật khẩu </a></p>
+                            <button class="login__form-submit" id="btnlogin" name="btnlogin" type="submit">Đăng nhập</button>
+                            <p class="login__form-admin"><a href="#adminlogin">Đăng nhập tài khoản admin</a></p>
+                        </form>
+                    </div>
+        
+                   <div id="register" role="tabpanel">
+                        <form onsubmit="Register()" id="register-form" class="register__form-register" method="post">
+                            <h3>ĐĂNG KÝ TÀI KHOẢN</h3>
+                            <p class="sub-title">Vui lòng nhập thông tin của bạn để đăng ký.</p>
+                            <div class="register__form-wrapper">
+                                <span>*<input class="register__form-input" type="text" placeholder="Địa chỉ email" id="resemail" autofocus></span>
+                            </div>
+                            <div class="register__form-wrapper">
+                                <span>*<input class="register__form-input" type="text" placeholder="Số điện thoại" id="resphone"></span>
+                            </div>
+                            <div class="register__form-wrapper">
+                                <span>*<input class="register__form-input" type="password" placeholder="Mật khẩu" id="respassword"/></span>
+                                <i onclick="togglepass1()" id="showbtn1" class="fas fa-eye" aria-hidden="true" fill="none"></i>
+                            </div>
+                            <div class="register__form-wrapper">
+                                <span>*<input class="register__form-input" type="password" placeholder="Xác nhận mật khẩu" id="passwordagain"/></span>
+                                <i onclick="togglepass2()" id="showbtn2" class="fas fa-eye" aria-hidden="true" fill="none"></i>
+                            </div>
+                            <p class="register-AgreedLicense"><input type="checkbox" name="agreedlicense" required> Đã xác nhận <a href="11-Policy.html">các điều khoản chính sách</a> của ZinZin Food.</p>
+                            <button class="register__form-submit" id="btnregister" name="btnregister" type="submit">Đăng ký</button>
+                        </form>
+                    </div>            
+                </div>    
+                <!--Kết Thúc Phần Tab Body-->
+                <div id="adminlogin" class="admin-login">
+                    <i onclick="closeFormLogin()" class="form-cancel fas fa-times" id="btncancel"></i>
+                    <div class="tab-header"><div><i class="forgotpassword__form"></i><b>ĐĂNG NHẬP</b></div></div>
+                    <Center><div class="tab-indicator"></div></Center>
+                    <div class="tab-body">
+                        <form action="#" id="admin-login-form" class="login__form-adminlogin" method="get">
+                            <h3>ĐĂNG NHẬP ADMIN</h3>
+                            <p class="sub-title">Vui lòng nhập thông tin tài khoản admin để đăng nhập.</p>
+                            <input id="adminusername" class="login__form-input" type="text" placeholder="Email hoặc Số điện thoại" autofocus><br>
+                            <div class="login__form-wrapper">
+                                <input class="login__form-input" type="password" placeholder="Mật khẩu" id="adminpassword">
+                                <i onclick="togglepass3()" id="showbtn3" class=" fas fa-eye" aria-hidden="true" fill="none"></i>
+                            </div>
+                            <p class="login-LostPassword lost_password"><a style="text-decoration:underline; cursor: pointer;" onclick="openFormForgot()" id="linkforgotpassword">Quên mật khẩu </a></p>
+                            <button class="login__form-submit" id="btnadminlogin" name="btnlogin" type="submit">Đăng nhập</button>
+                            <p class="login__form-admin"><a onclick="returnlogin()" href="#top">Đăng nhập tài khoản khách hàng</a></p>                  
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
+            
         <link rel="stylesheet" href="../css/forgotpassword.css">
-        <div style="display: none;" id="tab1" class="tab1">
-            <input type="checkbox" id="check">
-            <i onclick="closeFormForgot()" class="fas fa-times" id="btncancel"></i>
-            <div id="forgotpassword" class="forgot-password">
-                <div class="tab-header1"><div><i class="forgotpassword__form"></i><b>QUÊN MẬT KHẨU</b></div></div>
-                <Center><div class="tab-indicator1"></div></Center>
-                <form action="#" onsubmit="Forgot()" class="forgotpassword__form-forgotpassword" method="post">
-                    <h3>QUÊN MẬT KHẨU</h3>
-                    <p class="sub-title">Vui lòng nhập địa chỉ email hoặc số điện thoại đã đăng ký. Chúng tôi sẽ gửi đến bạn liên kết thay đổi mật khẩu.</p>
-                    <input class="forgotpassword__form-input" type="text" placeholder="Địa chỉ email" id="foremail" autofocus><br>
-                    <button type="submit" class="forgotpassword__form-submit" id="btnsend">Gửi</button>
-                    <label id="forcheck" style="display: none;" for="check"></label>
-                </form>
+        <div style="display: none;" id="tab-container2">
+            <div class="tab1">
+                <input type="checkbox" id="check">
+                <i onclick="closeFormForgot()" class="fas fa-times" id="btncancel"></i>
+                <div id="forgotpassword" class="forgot-password">
+                    <div class="tab-header1"><div><i class="forgotpassword__form"></i><b>QUÊN MẬT KHẨU</b></div></div>
+                    <Center><div class="tab-indicator1"></div></Center>
+                    <form action="#" onsubmit="Forgot()" class="forgotpassword__form-forgotpassword" method="post">
+                        <h3>QUÊN MẬT KHẨU</h3>
+                        <p class="sub-title">Vui lòng nhập địa chỉ email hoặc số điện thoại đã đăng ký. Chúng tôi sẽ gửi đến bạn liên kết thay đổi mật khẩu.</p>
+                        <input class="forgotpassword__form-input" type="text" placeholder="Địa chỉ email" id="foremail" autofocus><br>
+                        <button type="submit" class="forgotpassword__form-submit" id="btnsend">Gửi</button>
+                        <label id="forcheck" style="display: none;" for="check"></label>
+                    </form>
+                </div>
+                <div id="resetpassword" class="reset-password">
+                    <div class="tab-header1"><div><i class="resetpassword__form"></i><b>ĐỎI MẬT KHẨU</b></div></div>
+                    <Center><div class="tab-indicator1"></div></Center>
+                    <form onsubmit="Reset()" class="resetpassword__form-resetpassword" method="get">
+                        <h3>ĐỔI MẬT KHẨU</h3>
+                        <p class="sub-title">Bạn vui lòng nhập mật khẩu mới để tiến hành đổi mật khẩu. Hãy bảo đảm mật khẩu mới đủ mạnh và có ít nhất 8 ký tự.</p>
+                        <div class="resetpassword__form-wrapper">
+                            <input class="resetpassword__form-input" type="password" placeholder="Mật khẩu mới" id="password"/>
+                            <i onclick="togglepass()" id="showbtn" class="fas fa-eye" aria-hidden="true" fill="none"></i>
+                        </div>
+                        <div class="resetpassword__form-wrapper">
+                            <input class="resetpassword__form-input" type="password" placeholder="Xác nhận mật khẩu mới" id="passwordagain"/>
+                            <i onclick="togglepass2()" id="showbtn2" class="fas fa-eye" aria-hidden="true" fill="none"></i>
+                        </div>
+                        <button type="submit" class="resetpassword__form-submit" id="btnsend">Đổi mật khẩu</button>
+                        <div class="resent"><label for="check">Gửi lại liên kết</label></div>
+                    </form>
+                </div>    
             </div>
-            <div id="resetpassword" class="reset-password">
-                <div class="tab-header1"><div><i class="resetpassword__form"></i><b>ĐỎI MẬT KHẨU</b></div></div>
-                <Center><div class="tab-indicator1"></div></Center>
-                <form onsubmit="Reset()" class="resetpassword__form-resetpassword" method="get">
-                    <h3>ĐỔI MẬT KHẨU</h3>
-                    <p class="sub-title">Bạn vui lòng nhập mật khẩu mới để tiến hành đổi mật khẩu. Hãy bảo đảm mật khẩu mới đủ mạnh và có ít nhất 8 ký tự.</p>
-                    <div class="resetpassword__form-wrapper">
-                        <input class="resetpassword__form-input" type="password" placeholder="Mật khẩu mới" id="password"/>
-                        <i onclick="togglepass()" id="showbtn" class="fas fa-eye" aria-hidden="true" fill="none"></i>
-                    </div>
-                    <div class="resetpassword__form-wrapper">
-                        <input class="resetpassword__form-input" type="password" placeholder="Xác nhận mật khẩu mới" id="passwordagain"/>
-                        <i onclick="togglepass2()" id="showbtn2" class="fas fa-eye" aria-hidden="true" fill="none"></i>
-                    </div>
-                    <button type="submit" class="resetpassword__form-submit" id="btnsend">Đổi mật khẩu</button>
-                    <div class="resent"><label for="check">Gửi lại liên kết</label></div>
-                </form>
-            </div>    
         </div>
     </body>
     <script src="../javascript/login.js"></script>
