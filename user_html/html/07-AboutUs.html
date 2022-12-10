@@ -11,7 +11,7 @@
     <title>Về ZinZin Food | ZinZin Food - Đồ ăn vặt ZinZin</title>
     <style></style>
 </head>
-<body ng-app="angularApp" ng-controller="IntroductionController">
+<body ng-app="angularApp">
     <div class="header">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="../css/headerstyle.css">
@@ -222,7 +222,7 @@
                         </div>
                         <p class="login-LostPassword lost_password"><a style="text-decoration:underline; cursor: pointer;" onclick="openFormForgot()" id="linkforgotpassword">Quên mật khẩu </a></p>
                         <button class="login__form-submit" id="btnlogin" name="btnlogin" type="submit">Đăng nhập</button>
-                        <p class="login__form-admin"><a href="#adminlogin">Đăng nhập tài khoản admin</a></p>
+                        <p class="login__form-admin"><a href="#down">Đăng nhập tài khoản admin</a></p>
                     </form>
                 </div>
     
@@ -250,6 +250,7 @@
                 </div>            
             </div>    
             <!--Kết Thúc Phần Tab Body-->
+            <i id="down"></i>
             <div id="adminlogin" class="admin-login">
                 <i onclick="closeFormLogin()" class="form-cancel fas fa-times" id="btncancel"></i>
                 <div class="tab-header"><div><i class="forgotpassword__form"></i><b>ĐĂNG NHẬP</b></div></div>

@@ -175,12 +175,15 @@
 }
 .tab .tab-body td {
     color: #000000;
-    width: 50%;
+    width: calc(100%/2);
     justify-content: center;
     border: 0;
     padding: 0px 10px;
     outline: 0;
   }
+.login-with-social button {
+    width: 100%;
+}
   .tab .tab-body .login-with-social a {
     text-decoration: none;
     color: #ffffff;
@@ -189,20 +192,18 @@
     height: 40px;
 
 }
-.tab .tab-body .login-with-facebook-button {
+.login-with-facebook-button {
     background-color: #3b5998;
     border-radius: 10px;
     height: 40px;
-    width: 100%;
     outline: 0;
     border: 0;
     cursor: pointer;
 }
-.tab .tab-body .login-with-google-button {
+.login-with-social .login-with-google-button {
     background-color:#BD3213;
     border-radius: 10px;
     height: 40px;
-    width: 100%;
     outline: 0;
     border: 0;
     cursor: pointer;
@@ -293,11 +294,15 @@
 }
 
 @media screen and (max-width: 500px) {
+    #tab-container1 {
+        width: 100%;
+        height: 100%;
+    }
     .tab{
         width: 95%;
         font-size: 13px;
     }
-    .tab-body {
-        width: 100%;
+    .login-with-social tbody, tr {
+        display: flex;
     }
 }

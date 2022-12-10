@@ -269,8 +269,8 @@
         font-size: 14px;
     }
     .body{
-        margin-top: 110px;
         width: 100%;
+        padding-top: 100px;
     }
     .body > div{
         padding: 10px 40px;
@@ -323,8 +323,8 @@
         font-size: 17px;
     }
     .body{
+        padding-top: 65px;
         width: 100%;
-        margin-top: 150px;
     }
     .body > div{
         padding: 10px 20px;
