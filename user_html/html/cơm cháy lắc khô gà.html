@@ -163,14 +163,19 @@
                     </div>
                 </div>
                 <div class="footer">
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                    <link rel="stylesheet" href="../css/footerstyle.css">
+                    <script src="../javascript/login.js"></script>
+                    <script src="../javascript/footer.js"></script>
+            
                     <div class="submission_area">
                         <div class="text_guide">
                             <div class="title">Đăng ký theo dõi</div>
                             <div class="content">Đừng bỏ lỡ hàng ngàn sản phẩm và khuyến mãi cực hấp dẫn.</div>
                         </div>
                         <div class="box_input_group">
-                            <input class="inputbox" type="text" placeholder="Nhập email của bạn...">
-                            <input class="submit" type="submit" value="Đăng ký">
+                            <input id="input-email" class="inputbox" type="text" placeholder="Nhập email của bạn...">
+                            <input class="submit" type="submit" value="Đăng ký" onclick="ValidateEmail()" >
                         </div>
                     </div>
             
@@ -181,10 +186,10 @@
                                 <li><a>CÁC CÂU HỎI THƯỜNG GẶP</a></li>
                                 <li><a>GỬI YÊU CẦU HỖ TRỢ</a></li>
                                 <li><a>HƯỚNG DẪN ĐẶT HÀNG</a></li>
-                                <li><a>PHƯƠNG THỨC VẬN CHUYỂN</a></li>
-                                <li><a>CHÍNH SÁCH ĐỔI TRẢ</a></li>
-                                <li><a>HỖ TRỢ KHÁCH HÀNG: HOTRO@ZINZIN.VN</a></li>
-                                <li><a>BÁO LỖI BẢO MẬT SECURITY@ZINZIN.VN</a></li>
+                                <li><a href="11-Policy.html">PHƯƠNG THỨC VẬN CHUYỂN</a></li>
+                                <li><a href="11-Policy.html">CHÍNH SÁCH ĐỔI TRẢ</a></li>
+                                <li><a href="11-Policy.html">HỖ TRỢ KHÁCH HÀNG: HOTRO@ZINZIN.VN</a></li>
+                                <li><a href="11-Policy.html">BÁO LỖI BẢO MẬT SECURITY@ZINZIN.VN</a></li>
                             </ul>
                         </div>
             
@@ -212,9 +217,9 @@
                             <div class="connect_area">
                                 <div class="connect_us_texttitle">KẾT NỐI VỚI CHÚNG TÔI</div>
                                 <ul class="social_media_detail">
-                                    <li class="facebook"><i class="fa fa-facebook-square" aria-hidden="true"></i></li>
-                                    <li class="tiktok"><img src="../image/footer/tiktok.png" alt="tiktok"></li>
-                                    <li class="email"><i class="fa fa-envelope" aria-hidden="true"></i></li>
+                                    <li class="facebook"><a href="https://www.facebook.com/ZinZinFoodst"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+                                    <li class="tiktok"><a href="https://www.tiktok.com/@zinzinfood"><img src="../image/footer/tiktok.png" alt="tiktok"></a></li>
+                                    <li class="email"><a href="zinzinfood.contact@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
                                 </ul>
                             </div>
             
@@ -232,9 +237,13 @@
                             <div class="chat_area">
                                 <i><img src="../image/footer/messenger.png" alt="messenger" ></i>
                             </div>
+                            <div class="fwd_area" onclick="scrollToTop()">
+                                <i class="fa fa-caret-up" aria-hidden="true"></i>
+                            </div>
                         </div>
             
                     </div>
+                </div>
     </body>
     <!-- <div  class="footer"> <footer></footer></div> -->
 </html>
