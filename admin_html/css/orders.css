@@ -23,7 +23,7 @@ a{
 }
 .mybody{
     display:flex;
-    position: absolute;
+    /* position: absolute; */
     height: 100%;
 }
 .mycontent {
@@ -411,7 +411,21 @@ body {
     margin: auto;
 }
 
-@media screen and (max-width: 900px) {
+
+/* ============== RESPONSIVE =================================== */
+@media screen and (min-width: 400px) and (max-width: 900px) {
+    
+    .content{
+        width:100%;
+        height:100%;
+    }
+    .sidebar{
+        position:fixed;
+        left:-35%;
+        width: 35%;
+        height: 100%;
+    }
+    
     .table_list_Order {
         text-align: unset;
     }
@@ -492,7 +506,13 @@ body {
     .box_1{
         width:100%;
     }
+    .btn_Orders_box {
+        display: flex;
+        flex-direction: column;
+    }
 }
+
+
 @media screen and (max-width: 500px) {
     .table_list_Order {
         text-align: unset;
@@ -572,7 +592,8 @@ body {
         display: block;
     }
     .btn_Orders_box {
-        display: inline-flex;
+        display: flex;
+        flex-direction: column;
     }
     .functions_box {
         display: inline-flex;
