@@ -1,22 +1,25 @@
 /*Lấy Các Phần Tử Trong Thẻ DOM*/
-let tabHeader = document.getElementsByClassName("tab-header")[0];
-let tabIndicator = document.getElementsByClassName("tab-indicator")[0];
-let tabBody = document.getElementsByClassName("tab-body")[0];
-let tabsPane = tabHeader.getElementsByTagName("div");
-/*Thực Hiện Vòng Lặp*/
-for (let i = 0; i < tabsPane.length; i++) {
-    tabsPane[i].addEventListener("click", function () {
-        tabHeader.getElementsByClassName("active")[0].classList.remove("active");
-        tabsPane[i].classList.add("active");
-        tabBody.getElementsByClassName("active")[0].classList.remove("active");
-        tabBody.getElementsByTagName("div")[i].classList.add("active");
-        tabIndicator.style.left = `calc(calc(100% / 2) * ${i})`;
-    });
-};
+function doitab() {
+    let tabHeader = document.getElementsByClassName("tab-header")[0];
+    let tabIndicator = document.getElementsByClassName("tab-indicator")[0];
+    let tabBody = document.getElementsByClassName("tab-body")[0];
+    let tabsPane = tabHeader.getElementsByTagName("div");
+    /*Thực Hiện Vòng Lặp*/
+    for (let i = 0; i < tabsPane.length; i++) {
+        tabsPane[i].addEventListener("click", function () {
+            tabHeader.getElementsByClassName("active")[0].classList.remove("active");
+            tabsPane[i].classList.add("active");
+            tabBody.getElementsByClassName("active")[0].classList.remove("active");
+            tabBody.getElementsByTagName("div")[i].classList.add("active");
+            tabIndicator.style.left = `calc(calc(100% / 3) * ${i})`;
+        });
+    };
+}
+
 
 function scrollToTop() {
-               window.scrollTo(0, 0);
-            }
+    window.scrollTo(0, 0);
+}
     
 function returnlogin() {
     document.getElementById("top").style.removeProperty('display');
@@ -73,6 +76,7 @@ function Register(e) {
     let phone = document.getElementById('resphone').value;
     let password = document.getElementById('respassword').value;
     let passwordagain = document.getElementById('passwordagain').value;
+    let tabBody = document.getElementsByClassName("tab-body");
     var user = {
         email: email,
         phone: phone,
@@ -82,7 +86,7 @@ function Register(e) {
     var json = JSON.stringify(user);
     if (password == "" || passwordagain == "" || email == "" || phone =="") {
         alert("Vui lòng điền đầy đủ thông tin");
-    } else if (!IsEmail(email) && !IsPhone(phone)) {
+    } else if (!IsEmail(email) || !IsPhone(phone)) {
         alert("Vui lòng nhập đúng định dạng thông tin");
     }
     else if (password != passwordagain) {
@@ -92,7 +96,12 @@ function Register(e) {
         localStorage.setItem(email, json);
         localStorage.setItem(phone, json);
         alert('Đăng ký thành công');
-        document.location.href = '03-LoginSignup.html';
+        ResetValue();
+        document.getElementById("register").classList.remove("active");
+        document.getElementById("login").classList.add("active");
+        document.getElementById("register-header").classList.remove("active");
+        document.getElementById("login-header").classList.add("active");
+        document.getElementById("indicator").style.left = '0';
         }
 };
 
@@ -110,6 +119,7 @@ function LogIn(e) {
      else if ((username == data.email && password == data.password) || (username == data.phone && password == data.password)) {
         alert("Đăng nhập thành công");
         document.location.href = '02-Homepage.html';
+        ResetValue();
     } else {
         alert("Đăng nhập thất bại");
     }
@@ -124,8 +134,8 @@ function Forgot() {
         alert("Vui lòng điền đầy đủ thông tin");
     } else if (!IsEmail(email)) {
         alert("Vui lòng nhập đúng định dạng email");
-    }
-    else {
+    } else {
+        ResetValue();
         check.click();
         alert("Liên kết thay đổi mật khẩu sẽ được gửi đến bạn sớm, hãy kiểm tra hòm thư của bạn!");
     }
@@ -133,7 +143,27 @@ function Forgot() {
 
 function Reset() {
     event.preventDefault();
+    var password = document.getElementById('forpassword').value;
+    var check = document.getElementById('forcheck');
+    var passwordagain = document.getElementById('forpasswordagain').value;
+    if (password.length < 8) {
+        alert("Vui lòng điền mật khẩu đủ mạnh và có ít nhất 8 ký tự");
+    } else if (password != passwordagain) {
+        alert("Mật khẩu không khớp! Vui lòng nhập lại");
+    }
+    else {
+        alert("Đổi mật khẩu thành công");
+        ResetValue();
+        check.click();
+        closeFormForgot();
+        openFormLogin();
+    }
+};
+
+function ResetSplit() {
+    event.preventDefault();
     var password = document.getElementById('password').value;
+    var check = document.getElementById('forcheck');
     var passwordagain = document.getElementById('passwordagain').value;
     if (password.length < 8) {
         alert("Vui lòng điền mật khẩu đủ mạnh và có ít nhất 8 ký tự");
@@ -142,9 +172,24 @@ function Reset() {
     }
     else {
         alert("Đổi mật khẩu thành công");
-        document.location.href = '03-LoginSignup.html';
+        ResetValue();
+        check.click();
+        document.location.href = '03-LoginSignUp.html';
     }
 };
+
+function ResetValue() {
+    let input1 = document.querySelectorAll(".tab input");
+    let input2 = document.querySelectorAll(".tab1 input");
+    for (let i = 0; i < input1.length; i++) {
+        input1[i].value = '';
+        input1[i].ariaPlaceholder = true;
+        }
+    for (let i = 0; i < input2.length; i++) {
+        input2[i].value = '';
+        input2[i].ariaPlaceholder = true;
+        }
+}
 
 function AdminLogIn(e) {
     event.preventDefault();
@@ -158,7 +203,8 @@ function AdminLogIn(e) {
         alert("Vui lòng nhập đúng định dạng");
     } else{
         alert("Đăng nhập thành công");
-        document.location.href = '01-ad_Dashboard.html';
+        document.location.href = '../../admin_html/html/01-ad_Dashboard.html';
+        ResetValue();
     }
 };
 
@@ -224,6 +270,42 @@ function togglepass3() {
             toggle.classList.add("hide-btn");
         } else {
             password3.type = 'password';
+            toggle.classList.remove("hide-btn");
+        }
+    } else {
+        toggle.ariaDisabled = true;
+        alert('Vui lòng nhập thông tin vào trước')
+    } 
+}
+
+function togglepass4() {
+    var password4 = document.getElementById('forpassword');
+    var toggle = document.getElementById('showbtn4');
+    if (password4.value.length > 0) {
+        toggle.ariaDisabled = false;
+        if (password4.type == 'password') {
+            password4.type = 'text';
+            toggle.classList.add("hide-btn");
+        } else {
+            password4.type = 'password';
+            toggle.classList.remove("hide-btn");
+        }
+    } else {
+        toggle.ariaDisabled = true;
+        alert('Vui lòng nhập thông tin vào trước')
+    } 
+}
+
+function togglepass5() {
+    var password5 = document.getElementById('forpasswordagain');
+    var toggle = document.getElementById('showbtn5');
+    if (password5.value.length > 0) {
+        toggle.ariaDisabled = false;
+        if (password5.type == 'password') {
+            password5.type = 'text';
+            toggle.classList.add("hide-btn");
+        } else {
+            password5.type = 'password';
             toggle.classList.remove("hide-btn");
         }
     } else {

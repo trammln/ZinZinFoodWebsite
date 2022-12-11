@@ -302,7 +302,10 @@
         width: 95%;
         font-size: 13px;
     }
-    .login-with-social tbody, tr {
+    .login-with-social tbody {
+        display: block;
+    }
+    .login-with-social tr {
         display: flex;
     }
 }
