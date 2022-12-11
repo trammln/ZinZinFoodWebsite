@@ -196,7 +196,7 @@
     }
 
 
-  @media only screen and (max-width: 1200px) {
+  @media only screen and (max-width: 1280px) {
     .header .inputbox-search {
         position: relative;
         width: 300px;
@@ -355,5 +355,26 @@
         height: 30px;
         margin-bottom: 1px;
     }
+    .header .search_box{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .header .button_search_group {
+        margin-bottom: 0px;
+    }
    
+}
+
+@media only screen and (max-width: 500px) {
+    .header .logo {
+        display: none;
+    }
+    .header .header-format-icon-bar {
+        padding-right: 0px ;
+        padding-left: 0px;
+    }
+    .header .inputbox-search {
+        width: 140px;
+    }
 }
