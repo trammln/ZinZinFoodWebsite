@@ -1,5 +1,6 @@
 .header{
     position: fixed;
+    box-sizing: border-box;
     width: 100%;
     top: 0;
     z-index: 2;
@@ -7,7 +8,6 @@
     background-size: cover;
     padding: 5px;
     font-family:Arial, Helvetica, sans-serif;
-    margin-bottom: 130px;
 }
 .header a {
     text-decoration: none;
