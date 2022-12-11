@@ -160,24 +160,6 @@ function Reset() {
     }
 };
 
-function ResetSplit() {
-    event.preventDefault();
-    var password = document.getElementById('password').value;
-    var check = document.getElementById('forcheck');
-    var passwordagain = document.getElementById('passwordagain').value;
-    if (password.length < 8) {
-        alert("Vui lòng điền mật khẩu đủ mạnh và có ít nhất 8 ký tự");
-    } else if (password != passwordagain) {
-        alert("Mật khẩu không khớp! Vui lòng nhập lại");
-    }
-    else {
-        alert("Đổi mật khẩu thành công");
-        ResetValue();
-        check.click();
-        document.location.href = '03-LoginSignUp.html';
-    }
-};
-
 function ResetValue() {
     let input1 = document.querySelectorAll(".tab input");
     let input2 = document.querySelectorAll(".tab1 input");
