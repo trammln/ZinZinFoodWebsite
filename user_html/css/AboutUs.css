@@ -360,8 +360,10 @@
         width: 140px;
         height: 140px;
     }
-    #service td, tr {
+    #service tr {
         display: block;
-        width: 100%;
+    }
+    #service td {
+        display: block;
     }
 }
