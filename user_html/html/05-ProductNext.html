@@ -5,12 +5,12 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="../css/sản phẩm.css" rel="stylesheet" type="text/css"/>
-        <link href="../css/headerstyle.css" rel="stylesheet" type="text/css"/>
+        <link href="../css/headerproduct.css" rel="stylesheet" type="text/css"/>
         <link href="../css/footerstyle.css" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel='stylesheet prefetch' href='https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css'>
         <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <title>Trang sản phẩm</title>
+        <title>Trang sản phẩm | ZinZin Food - Đồ ăn vặt ZinZin</title>
         
     </head>
 
@@ -19,8 +19,8 @@
         <div class="header">
             <div class="searchbar">
                 <div class="logo">
-                    <a href=""  title="Zin Zin Food"><img class="logokey" src="../image/logo/whitelogo.png" alt="logo" ></a>
-                    <a href="" title="Zin Zin Food"><img class="logotitle" src="../image/logo/whitetitle.png" alt="logotitle" ></a>
+                    <a href="02-Homepage.html"  title="Zin Zin Food"><img class="logokey" src="../image/logo/whitelogo.png" alt="logo" ></a>
+                    <a href="02-Homepage.html" title="Zin Zin Food"><img class="logotitle" src="../image/logo/whitetitle.png" alt="logotitle" ></a>
                 </div>
                 <div class="search_box">
                 
@@ -44,28 +44,140 @@
                         </div>
                     </div>
             <!-- Search box -->
-                    <div><input class="inputbox-search" data-view-id="main_search_from_input" type="text" value placeholder="Tìm kiếm đồ ăn vặt" ></div>
-                    <div class="button_search_group">
-                        <button data-view-id="main_search_from_button" class="Search_Button">
-                            <i class="fa fa-search" aria-hidden="true"></i></button>
-                    </div>
-                </div>
-                
+
+        <form onsubmit="submitForm(event)">
+                <div><input class="inputbox-search" data-view-id="main_search_from_input" type="text" value placeholder="Tìm kiếm đồ ăn vặt" id="inputvalue"></div>
+            </div> 
+            <!-- <input data-view-id="main_search_from_button" class="Search_Button" type="submit" title="Tìm kiếm" /> -->
+            <div class="button_search_group">
+                <button data-view-id="main_search_from_button" class="Search_Button">
+                <i class="fa fa-search" aria-hidden="true"></i></button>
+            </div>
+        </form>
+            <div id="results"></div>
+                <script>
+                    function submitForm(event){ 
+                    event.preventDefault();
+                    var ele = document.getElementById("inputvalue");                
+           
+                    if (ele.value +""==="bánh tráng"){window.location.replace("search_banhtrang.html")}
+                    else if (ele.value +""==="banh trang"){window.location.replace("search_banhtrang.html")}
+                    else if (ele.value +""==="bánh tráng cuộn bơ"){window.location.replace("search_banhtrangcuonbo.html")}
+                    else if (ele.value +""==="cuộn bơ"){ window.location.replace("search_banhtrangcuonbo.html")}
+                    else if (ele.value +""==="cuon bo"){window.location.replace("search_banhtrangcuonbo.html")}
+                    else if (ele.value +""==="banh trang cuon bo"){window.location.replace("search_banhtrangcuonbo.html")}
+
+                    else if (ele.value +""==="bánh tráng phô mai"){window.location.replace("search_banhtrangphomaitomhanh.html")}
+                    else if (ele.value +""==="banh trang pho mai"){window.location.replace("search_banhtrangphomaitomhanh.html")}
+                    else if (ele.value +""==="phô mai"){window.location.replace("search_banhtrangphomaitomhanh.html")}
+                    else if (ele.value +""==="pho mai"){window.location.replace("search_banhtrangphomaitomhanh.html")}
+                    
+                    else if (ele.value +""==="bánh tráng rong biển"){ window.location.replace("search_banhtrangrongbien.html")}
+                    else if (ele.value +""==="banh trang rong bien"){ window.location.replace("search_banhtrangrongbien.html")}
+                    else if (ele.value +""==="rong biển"){ window.location.replace("search_banhtrangrongbien.html")}
+                    else if (ele.value +""==="rong bien"){ window.location.replace("search_banhtrangrongbien.html")}
+
+                    else if (ele.value +""==="bánh tráng sa tế bò"){window.location.replace("search_banhtrangsatebo.html")}
+                    else if (ele.value +""==="banh trang sa te bo"){window.location.replace("search_banhtrangsatebo.html")}
+                    else if (ele.value +""==="sa tế bò"){window.location.replace("search_banhtrangsatebo.html")}
+                    else if (ele.value +""==="sa te bo"){window.location.replace("search_banhtrangsatebo.html")}
+                    else if (ele.value +""==="sate bò"){window.location.replace("search_banhtrangsatebo.html")}
+                    else if (ele.value +""==="sate bo"){window.location.replace("search_banhtrangsatebo.html")}
+                    else if (ele.value +""==="bò"){window.location.replace("search_banhtrangsatebo.html")}
+                    else if (ele.value +""==="bo"){window.location.replace("search_banhtrangsatebo.html")}
+                    else if (ele.value +""==="sate"){window.location.replace("search_banhtrangsatebo.html")}
+                    else if (ele.value +""==="sa tế"){window.location.replace("search_banhtrangsatebo.html")}
+                    
+                    else if (ele.value +""==="bánh tráng sa tế tắc"){window.location.replace("search_banhtrangsatetac.html")}
+                    else if (ele.value +""==="banh trang sa te tac"){window.location.replace("search_banhtrangsatetac.html")}
+                    else if (ele.value +""==="sa tế tắc"){window.location.replace("search_banhtrangsatetac.html")}
+                    else if (ele.value +""==="sa te tac"){window.location.replace("search_banhtrangsatetac.html")}
+                    else if (ele.value +""==="sate tắc"){window.location.replace("search_banhtrangsatetac.html")}
+                    else if (ele.value +""==="sate tac"){window.location.replace("search_banhtrangsatetac.html")}
+                    else if (ele.value +""==="tắc"){window.location.replace("search_banhtrangsatetac.html")}
+                    else if (ele.value +""==="tac"){window.location.replace("search_banhtrangsatetac.html")}
+
+                    else if (ele.value +""==="bánh tráng tỏi phi cay"){window.location.replace("search_banhtrangtoiphicay.html")}
+                    else if (ele.value +""==="banh trang toi phi cay"){window.location.replace("search_banhtrangtoiphicay.html")}
+                    else if (ele.value +""==="tỏi phi cay"){window.location.replace("search_banhtrangtoiphicay.html")}
+                    else if (ele.value +""==="toi phi cay"){window.location.replace("search_banhtrangtoiphicay.html")}
+                    
+                    else if (ele.value +""==="cơm cháy khô gà"){ window.location.replace("search_comchaykhoga.html")}
+                    else if (ele.value +""==="com chay kho ga"){ window.location.replace("search_comchaykhoga.html")}
+                    else if (ele.value +""==="cơm cháy"){ window.location.replace("search_comchaykhoga.html")}
+                    else if (ele.value +""==="com chay"){ window.location.replace("search_comchaykhoga.html")}
+                    
+                    else if (ele.value +""==="khô gà lá chanh"){window.location.replace("search_khogalachanh.html")}
+                    else if (ele.value +""==="kho ga la chanh"){window.location.replace("search_khogalachanh.html")}
+                    else if (ele.value +""==="khô gà"){window.location.replace("search_khogalachanh.html")}
+                    else if (ele.value +""==="kho ga"){window.location.replace("search_khogalachanh.html")}
+
+                    
+                    else if (ele.value +""==="khô heo giả bò"){window.location.replace("search_khoheogiabo.html")}
+                    else if (ele.value +""==="kho heo gia bo"){window.location.replace("search_khoheogiabo.html")}
+                    else if (ele.value +""==="kho heo"){window.location.replace("search_khoheogiabo.html")}
+                    else if (ele.value +""==="khô heo"){window.location.replace("search_khoheogiabo.html")}
+                    else if (ele.value +""==="khô bò"){window.location.replace("search_khoheogiabo.html")}
+                    else if (ele.value +""==="kho bo"){window.location.replace("search_khoheogiabo.html")}
+
+                    else if (ele.value +""==="tăm que cay cay"){window.location.replace("search_tamquecaycay.html")}
+                    else if (ele.value +""==="tăm que"){window.location.replace("search_tamquecaycay.html")}
+                    else if (ele.value +""==="tam que cay cay"){window.location.replace("search_tamquecaycay.html")}
+                    else if (ele.value +""==="tam que"){window.location.replace("search_tamquecaycay.html")}
+
+                    else if (ele.value +""==="quẩy bò zinzin"){window.location.replace("search_quaybozinzin.html")}
+                    else if (ele.value +""==="quẩy bò"){window.location.replace("search_quaybozinzin.html")}
+                    else if (ele.value +""==="quay bo zinzin"){window.location.replace("search_quaybozinzin.html")}
+                    else if (ele.value +""==="quay bo"){window.location.replace("search_quaybozinzin.html")}
+
+                    else if (ele.value +""==="mực bento cay cay" ){window.location.replace("search_mucbentocaycay.html")}
+                    else if (ele.value +""==="mực bento" ){window.location.replace("search_mucbentocaycay.html")}
+                    else if (ele.value +""==="muc bento cay cay" ){window.location.replace("search_mucbentocaycay.html")}
+                    else if (ele.value +""==="muc bento" ){window.location.replace("search_mucbentocaycay.html")}
+                    else if (ele.value +""==="bento" ){window.location.replace("search_mucbentocaycay.html")}
+
+                    else if (ele.value +""==="snack bò thơm cay"){window.location.replace("search_snackbothomcay.html")}
+                    else if (ele.value +""==="snack bò"){window.location.replace("search_snackbothomcay.html")}
+                    else if (ele.value +""==="snack bo thom cay"){window.location.replace("search_snackbothomcay.html")}
+                    else if (ele.value +""==="snack bo"){window.location.replace("search_snackbothomcay.html")}
+                    else if (ele.value +""==="snack"){window.location.replace("search_snackbothomcay.html")}
+                    else if (ele.value +""==="thơm cay"){window.location.replace("search_snackbothomcay.html")}
+                    else if (ele.value +""==="thom cay"){window.location.replace("search_snackbothomcay.html")}
+
+                    else  {   window.alert("Không có kết quả tìm kiếm!");}
+
+            } 
+                </script>      
                 <div class="tool-group">
-                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    <a href="09-Cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
                     <i class="fa fa-bell" aria-hidden="true"></i>
-                    <i class="fa fa-user" aria-hidden="true"></i>
-                </div>
+                    <!-- <i class="fa fa-user" aria-hidden="true"></i> -->
+        
+                    <div class="header-user-box">
+                        <input type="checkbox" id="header-user">
+                        <label for="header-user">
+                            <div class="header-user-icon-div">
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                            </div>
+                        </label>             
+                        <div class="user-options">
+                                <li ><a href="04-Account.html" id="header-account">Cá nhân</a></li>
+                                <li><a href="03-LoginSignup.html" id="header-dangnhap">Đăng nhập</a></li>
+                                <!-- <li><a>Đăng xuất</a></li> -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>       
             </div>
     
             <div class="navigationbar">
                 <ul class="navigationtab">
-                    <li>Trang chủ</li>
-                    <li>Sản phẩm</li>
-                    <li>Về Zin Zin Food</li>
-                    <li>Chính sách & Điều khoản</li>
-                    <li>Blog</li>
-                    <li>Liên hệ</li>
+                    <li><a href="02-Homepage.html">Trang chủ</a></li>        
+                    <li><a href="05-Product.html">Sản phẩm</a></li>
+                    <li><a href="07-AboutUs.html">Về Zin Zin Food</a></li>
+                    <li><a href="11-Policy.html">Chính sách & Điều khoản</a></li>
+                    <li><a href="12-Voucher.html">Ưu đãi</a></li>
+                            <!-- <li><a>Liên hệ</a></li> -->
                 </ul>
             </div>
         </div>

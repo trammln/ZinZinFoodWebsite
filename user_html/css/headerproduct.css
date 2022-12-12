@@ -44,7 +44,8 @@
     align-items: center;
     vertical-align: middle;
     justify-content: center;
-    margin: 10px 0px 0px 0px  
+    margin: 10px 0px 0px 0px ;
+    margin-top: 10px;
 }
 
 .header .inputbox-search {
@@ -56,6 +57,7 @@
     border-radius: 5px 0px 0px 5px;
     margin-left: 20px;
     padding-left: 10px;
+    margin-top: 10px;
     /* box-shadow: 2px 2px #7c7c7c; */
 }
 
@@ -67,6 +69,7 @@
     min-width: 10%;
     align-items: center;
     vertical-align: middle;
+    margin-bottom: 3px;
 }
 .header .Search_Button{
     position: relative;
@@ -75,6 +78,7 @@
     height: 40px;
     border-style: none;
     border-radius: 0px 5px 5px 0px;
+    margin-bottom: 3px;
 }
 .header .button_search_group i{
     font-size: 20px;
@@ -132,6 +136,11 @@
     color: black;
     text-decoration: none;
 }
+
+.header #header-dangnhap{
+    color: black;
+    text-decoration: none;
+}
 .header .header-user-icon-div:hover + .user-options{
     display: flex;
     }
@@ -144,7 +153,7 @@
   }
 
 .header  .header-user-icon-div i{
-    padding-top: 7px;
+    padding-top: 0px;
   }
 
   .header  #header-user{
@@ -168,6 +177,7 @@
     display: list-item;
     text-align: left;
     padding: 7px;
+
   }
 
   .header  .user-options li:hover{
@@ -180,6 +190,9 @@
     color:white;
   }
   
+  .header  .user-options #header-dangnhap:hover{
+    color:white;
+  }
   .header  #header-user:checked ~ .user-options{
     display: block;
   }
