@@ -97,6 +97,8 @@ function Register(e) {
         localStorage.setItem(phone, json);
         alert('Đăng ký thành công');
         ResetValue();
+        document.getElementById('username').value = email;
+        document.getElementById('password').value = password;
         document.getElementById("register").classList.remove("active");
         document.getElementById("login").classList.add("active");
         document.getElementById("register-header").classList.remove("active");
@@ -111,17 +113,20 @@ function LogIn(e) {
     let password = document.getElementById('password').value;
     let user = localStorage.getItem(username);
     let data = JSON.parse(user);
-    if (password == "" || username == "") {
-        alert("Vui lòng điền đầy đủ thông tin");
-    }   else if (!IsEmail(username) && !IsPhone(username)) {
-        alert("Vui lòng nhập đúng định dạng");
-    }
-     else if ((username == data.email && password == data.password) || (username == data.phone && password == data.password)) {
-        alert("Đăng nhập thành công");
-        document.location.href = '02-Homepage.html';
-        ResetValue();
-    } else {
-        alert("Đăng nhập thất bại");
+        if (password == "" || username == "") {
+            alert("Vui lòng điền đầy đủ thông tin");
+        }   else if (!IsEmail(username) && !IsPhone(username)) {
+            alert("Vui lòng nhập đúng định dạng");
+        } else if (data == null){
+            alert("Không tồn tại tài khoản");
+        } else {
+          if ((username == data.email && password == data.password) || (username == data.phone && password == data.password)) {
+            alert("Đăng nhập thành công");
+            document.location.href = '02-Homepage.html';
+            ResetValue();
+        } else {
+            alert("Không tồn tại tài khoản");
+        }
     }
 };
 
@@ -130,33 +135,50 @@ function Forgot() {
     event.preventDefault();
     var check = document.getElementById('forcheck');
     var email = document.getElementById('foremail').value;
+    let user = localStorage.getItem(email);
+    let data = JSON.parse(user);
     if (email == "") {
         alert("Vui lòng điền đầy đủ thông tin");
     } else if (!IsEmail(email)) {
         alert("Vui lòng nhập đúng định dạng email");
+    } else if (data == null) {
+        alert("Không tồn tại tài khoản");
     } else {
-        ResetValue();
-        check.click();
-        alert("Liên kết thay đổi mật khẩu sẽ được gửi đến bạn sớm, hãy kiểm tra hòm thư của bạn!");
+        if (email == data.email) {
+            ResetValue();
+            check.click();
+            alert("Liên kết thay đổi mật khẩu sẽ được gửi đến bạn sớm, hãy kiểm tra hòm thư của bạn!");
+        }
+        else {
+            alert("Không tồn tại tài khoản");
+        }
     }
 };
 
 function Reset() {
     event.preventDefault();
+    var email = document.getElementById('foremail').value;
     var password = document.getElementById('forpassword').value;
     var check = document.getElementById('forcheck');
     var passwordagain = document.getElementById('forpasswordagain').value;
+    let user = localStorage.getItem(email);
+    let data = JSON.parse(user);
     if (password.length < 8) {
         alert("Vui lòng điền mật khẩu đủ mạnh và có ít nhất 8 ký tự");
     } else if (password != passwordagain) {
         alert("Mật khẩu không khớp! Vui lòng nhập lại");
-    }
-    else {
-        alert("Đổi mật khẩu thành công");
-        ResetValue();
-        check.click();
-        closeFormForgot();
-        openFormLogin();
+    } else if (data == null) {
+        alert("Không tồn tại tài khoản");
+    } else {
+        if (email == data.email && password != data.password) {
+            alert("Đổi mật khẩu thành công");
+            ResetValue();
+            check.click();
+            closeFormForgot();
+            openFormLogin();
+    } else {
+        alert("Mật khẩu mới phải khác mật khẩu trước đây!");
+        }
     }
 };
 
@@ -171,22 +193,28 @@ function ResetValue() {
         input2[i].value = '';
         input2[i].ariaPlaceholder = true;
         }
-}
+};
 
 function AdminLogIn(e) {
     event.preventDefault();
-
     let username = document.getElementById('adminusername').value;
     let password = document.getElementById('adminpassword').value;
-    
-    if (password == "" || username == "") {
-        alert("Vui lòng điền đầy đủ thông tin");
-    }   else if (!IsEmail(username) && !IsPhone(username)) {
-        alert("Vui lòng nhập đúng định dạng");
-    } else{
-        alert("Đăng nhập thành công");
-        document.location.href = '../../admin_html/html/01-ad_Dashboard.html';
-        ResetValue();
+    let user = localStorage.getItem(username);
+    let data = JSON.parse(user);
+        if (password == "" || username == "") {
+            alert("Vui lòng điền đầy đủ thông tin");
+        }   else if (!IsEmail(username) && !IsPhone(username)) {
+            alert("Vui lòng nhập đúng định dạng");
+        } else if (data == null){
+            alert("Không tồn tại tài khoản");
+        } else {
+          if ((username == data.email && password == data.password) || (username == data.phone && password == data.password)) {
+            alert("Đăng nhập thành công");
+            document.location.href = '../../admin_html/html/01-ad_Dashboard.html';
+            ResetValue();
+        } else {
+            alert("Không tồn tại tài khoản");
+        }
     }
 };
 
