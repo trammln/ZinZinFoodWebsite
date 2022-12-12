@@ -139,6 +139,14 @@ label #btn{
 .image2{
     width: 400px;
 }
+@media screen and (min-width: 901px) and (max-width: 1500px){
+.image1{
+    width: 400px;
+}
+.image2{
+    width: 300px;
+}
+}
 
 @media screen and (min-width: 400px) and (max-width: 900px){
     .content{
@@ -222,9 +230,6 @@ label #btn{
     }
     .td{
         align-content: center;
-    }
-    .functions_box1{
-        
     }
 
 }
