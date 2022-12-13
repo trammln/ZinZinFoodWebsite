@@ -396,5 +396,24 @@
     .header .Search_Button {
         height: 30px;
         margin-bottom: 6px;
+        padding-left: 3px;
+    }
+    .header .button_search_group{
+        min-width: 20%;
+        align-items: center;
+        vertical-align: middle;
+    }
+        
+    .header{
+        position: fixed;
+        box-sizing: border-box;
+        width: 100%;
+        top: 0;
+        height: 11%;
+        z-index: 2;
+        background-color:#BD3213;
+        background-size: cover;
+        padding: 5px;
+        font-family:Arial, Helvetica, sans-serif;
     }
 }

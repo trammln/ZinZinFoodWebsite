@@ -1036,5 +1036,16 @@ margin-right: 2px;
 #sao5{
   margin-right: 2px;
 }
+
+#btn_next2 {
+  margin-top: 1px;
+  margin-left: 185px;
+  width: 19%;
+  height: 1.2%;
+  border: grey;
+  
+ }
+
+ 
 }
 

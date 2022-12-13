@@ -440,6 +440,10 @@ body{
         float: left;
         margin-left: 1px;
     }
+
+    .container{
+        height: 180%;
+    }
     #kho {
         font-size: 24px;
         margin-left: 12px;
@@ -708,11 +712,11 @@ body{
 }
 /* Phần responsive cho iphone */
 @media only screen and (max-width: 500px){
-    .header{
+    /* .header{
         width: 120%;
-    }
+    } */
     .container{
-        height: 160%;
+        height: 190%;
     }
     #column1{
         width: 30%;
@@ -893,7 +897,7 @@ body{
 
 #btn_next2{
     margin-top: 10px;
-    margin-left: 205px;
+    margin-left: 185px;
     margin-right: 10px;
     width: 50px;
     height: 25px;
