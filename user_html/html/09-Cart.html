@@ -16,14 +16,17 @@
 <body class="mybody" >
     <!--=======================HEADER=========================-->
     <div id="header">
-        <div class="header">
+        <div class="header" style="min-width: 0px; margin-bottom: 0px;">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>    </head>
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
             <link rel="stylesheet" href="../css/headerstyle.css">
             
             <div class="searchbar">
                 <div class="logo">
-                    <a href="../html/02-Homepage.html"  title="Zin Zin Food"><img class="logokey" src="../image/logo/whitelogo.png" alt="logo" ></a>
-                    <a href="../html/02-Homepage.html" title="Zin Zin Food"><img class="logotitle" src="../image/logo/whitetitle.png" alt="logotitle" ></a>
+                    <a href="02-Homepage.html"  title="Zin Zin Food"><img class="logokey" src="../image/logo/whitelogo.png" alt="logo" ></a>
+                    <a href="02-Homepage.html" title="Zin Zin Food"><img class="logotitle" src="../image/logo/whitetitle.png" alt="logotitle" ></a>
                 </div>
                 <div class="search_box">
                 
@@ -36,29 +39,33 @@
                             </div>
                         </label>
                         
-                    <div class="div-header-list-menu">
-                        <li><a href="02-Homepage.html">Trang chủ</a></li>
+                        <div class="div-header-list-menu">
+                            <ul>
+                                <li><a href="02-Homepage.html">Trang chủ</a></li>
+                        <li><a href="04-Account.html">Trang cá nhân</a></li>
+                        <li><a onclick="openFormLogin(); scrollToTop()">Đăng nhập</a></li>
+                        <li><a href="">Thông báo</a></li>
+                        <li><a href="09-Cart.html">Giỏ hàng</a></li>
                         <li><a href="05-Product.html">Sản phẩm</a></li>
                         <li><a href="07-AboutUs.html">Về Zin Zin Food</a></li>
                         <li><a href="11-Policy.html">Chính sách & Điều khoản</a></li>
                         <li><a href="12-Voucher.html">Ưu đãi</a></li>
                         <!-- <li><a>Liên hệ</a></li> -->
-                        </ul>
+                            </ul>
+                        
+                       
                         </div>
                     </div>
-
-                    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-                    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-
+        
              <form onsubmit="submitForm(event)">
                             <div><input class="inputbox-search" data-view-id="main_search_from_input" type="text" value placeholder="Tìm kiếm đồ ăn vặt" id="inputvalue"></div>
                         </div> 
                         <!-- <input data-view-id="main_search_from_button" class="Search_Button" type="submit" title="Tìm kiếm" /> -->
                         <div class="button_search_group" style="min-width: 0px;">
-                            <button data-view-id="main_search_from_button" class="Search_Button">
+                            <button data-view-id="main_search_from_button" class="Search_Button" style="margin-bottom: 0px;">
                                 <i class="fa fa-search" aria-hidden="true"></i></button>
                         </div>
+                    </form>
                         <div id="results"></div>
                             <script>
                                 function submitForm(event){ 
@@ -154,7 +161,7 @@
                         } 
                             </script>      
                 <div class="tool-group">
-                    <a href="../html/09-Cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                    <a href="09-Cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
                     <i class="fa fa-bell" aria-hidden="true"></i>
                     <!-- <i class="fa fa-user" aria-hidden="true"></i> -->
         
@@ -166,15 +173,26 @@
                             </div>
                         </label>             
                         <div class="user-options">
-                                <li><a href="../html/04-Account.html">Cá nhân</a></li>
+                                <li ><a href="04-Account.html" id="header-account">Cá nhân</a></li>
                                 <li><a onclick="openFormLogin(); scrollToTop()">Đăng nhập</a></li>
-                                <li><a>Đăng xuất</a></li>
+                                <!-- <li><a>Đăng xuất</a></li> -->
                             </ul>
                         </div>
                     </div>
                 </div>       
             </div>
-        </div>
+        
+            <div class="navigationbar">
+                <ul class="navigationtab">
+                    <li><a href="02-Homepage.html">Trang chủ</a></li>        
+                    <li><a href="05-Product.html">Sản phẩm</a></li>
+                    <li><a href="07-AboutUs.html">Về Zin Zin Food</a></li>
+                    <li><a href="11-Policy.html">Chính sách & Điều khoản</a></li>
+                    <li><a href="12-Voucher.html">Ưu đãi</a></li>
+                            <!-- <li><a>Liên hệ</a></li> -->
+                </ul>
+            </div>
+        </div> 
         <link rel="stylesheet" href="../css/loginsignup.css">
         <div onclick="doitab()" style="display: none;" id="tab-container1">
             <div id="tab" class="tab">
@@ -188,7 +206,7 @@
                 </div>
                 <!--Kết Thúc Phần Tab Header-->
                 <div id="indicator" class="tab-indicator"></div>
-                <!--Bắt Đầu Phần Tab Body-->
+                 <!--Bắt Đầu Phần Tab Body-->
                 <div class="tab-body">
                     <div id="login" class="active" role="tabpanel">
                         <form onsubmit="LogIn()" id="login-form" class="login__form-login" method="post">
@@ -222,8 +240,8 @@
                             <p class="login__form-admin"><a style="text-decoration:underline; cursor: pointer;" href="#down">Đăng nhập tài khoản admin</a></p>
                         </form>
                     </div>
-
-                <div id="register" role="tabpanel">
+        
+                   <div id="register" role="tabpanel">
                         <form onsubmit="Register()" id="register-form" class="register__form-register" method="post">
                             <h3>ĐĂNG KÝ TÀI KHOẢN</h3>
                             <p class="sub-title">Vui lòng nhập thông tin của bạn để đăng ký.</p>
@@ -269,7 +287,6 @@
                 </div>
             </div>
         </div>
-            
         <link rel="stylesheet" href="../css/forgotpassword.css">
         <div style="display: none;" id="tab-container2">
             <div class="tab1">
@@ -307,13 +324,13 @@
             </div>
         </div>
         <script src="../javascript/login.js"></script>
-      </div>
+    </div>
 
 <!--=======================BODY=========================-->
-    <div id="giohangtrong" style="margin-top: 150px; margin-bottom: 100px;">
+    <div id="giohangtrong" style="margin-top: 250px; margin-bottom: 100px;">
         <p id="thongbao">Giỏ hàng trống, bạn hãy thêm sản phẩm vào đây nhé!</p>
     </div>
-    <div class="container" id="giohang" style="margin-top: 0px; margin-bottom: 40px;">
+    <div class="container" id="giohang">
         <div class="row TieuDe" style="margin-bottom: 10px;" >
             <div class="col-sm-4">
                 <form>
