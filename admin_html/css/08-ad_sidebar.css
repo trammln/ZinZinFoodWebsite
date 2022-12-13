@@ -206,6 +206,6 @@ table.table_list_Product td.product_name{
     text-align: left;
 }
 table.table_list_Product td.product_price{
-    text-align: center;
+    text-align: right;
 }
 

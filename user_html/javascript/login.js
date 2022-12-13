@@ -70,6 +70,32 @@ function IsPhone(phone) {
     }
 }
 
+//Nạp dữ liệu user trước
+var user = [
+    {
+        email: "user1@gmail.com",
+        phone: "0909090909",
+        password: "12345678"
+    },
+    {
+        email: "user2@gmail.com",
+        phone: "0999999999",
+        password: "12345678"
+    },
+    {
+        email: "user3@gmail.com",
+        phone: "0333333333",
+        password: "12345678"
+    },
+]
+for (var i = 0; i < user.length; i++)
+{
+    var json = JSON.stringify(user[i]);
+    localStorage.setItem(user[i].email, json);
+    localStorage.setItem(user[i].phone, json);
+}
+
+
 function Register(e) {
     event.preventDefault();
     let email = document.getElementById('resemail').value;
@@ -134,18 +160,17 @@ function LogIn(e) {
 function Forgot() {
     event.preventDefault();
     var check = document.getElementById('forcheck');
-    var email = document.getElementById('foremail').value;
-    let user = localStorage.getItem(email);
+    var username = document.getElementById('foremail').value;
+    let user = localStorage.getItem(username);
     let data = JSON.parse(user);
-    if (email == "") {
+    if (username == "") {
         alert("Vui lòng điền đầy đủ thông tin");
-    } else if (!IsEmail(email)) {
+    } else if (!IsEmail(username) && !IsPhone(username)) {
         alert("Vui lòng nhập đúng định dạng email");
     } else if (data == null) {
         alert("Không tồn tại tài khoản");
     } else {
-        if (email == data.email) {
-            ResetValue();
+        if (username == data.email || username == data.phone) {
             check.click();
             alert("Liên kết thay đổi mật khẩu sẽ được gửi đến bạn sớm, hãy kiểm tra hòm thư của bạn!");
         }
@@ -157,11 +182,11 @@ function Forgot() {
 
 function Reset() {
     event.preventDefault();
-    var email = document.getElementById('foremail').value;
+    var username = document.getElementById('foremail').value;
     var password = document.getElementById('forpassword').value;
     var check = document.getElementById('forcheck');
     var passwordagain = document.getElementById('forpasswordagain').value;
-    let user = localStorage.getItem(email);
+    let user = localStorage.getItem(username);
     let data = JSON.parse(user);
     if (password.length < 8) {
         alert("Vui lòng điền mật khẩu đủ mạnh và có ít nhất 8 ký tự");
@@ -170,7 +195,15 @@ function Reset() {
     } else if (data == null) {
         alert("Không tồn tại tài khoản");
     } else {
-        if (email == data.email && password != data.password) {
+        if ((username == data.email && password != data.password) || (username == data.phone && password != data.password)) {
+            var resetuser = {
+                email: data.email,
+                phone: data.phone,
+                password: password,
+            }
+            var json = JSON.stringify(resetuser);
+            localStorage.setItem(data.email, json);
+            localStorage.setItem(data.phone, json);
             alert("Đổi mật khẩu thành công");
             ResetValue();
             check.click();
@@ -323,9 +356,6 @@ function togglepass5() {
         alert('Vui lòng nhập thông tin vào trước')
     } 
 }
-function Cancel(){
-    window.location.href = '03-LoginSignup.html';
-};
 function Close() {
     window.close();
 };

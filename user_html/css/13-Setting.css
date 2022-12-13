@@ -13,7 +13,7 @@
     background-color: var(--light_gray);
 }
 #header{
-    background-color:var(--red) ;
+    background-color:#BD3213 ;
     height: 100%;
     border: none;
     text-align: center;
@@ -36,13 +36,13 @@
 
 /* ------------slidebar------------ */
 .slidebar {
-    border: 1px solid var(--red);
+    border: 1px solid #BD3213;
     margin: 10px 0px 0 0px;
     padding: 0;
     background-color: var(--white);
 }
 .slidebar h3{
-    background-color: var(--red);
+    background-color: #BD3213;
     color: var(--white);
     padding-left: 10px;
 }
@@ -72,7 +72,7 @@
 
 .slidebar a:hover, .dropdown_btn:hover, #btnLuu:hover{
     color: var(--white);
-    background-color: var(--red);
+    background-color: #BD3213;
 }
 
 .fa-caret-down {
@@ -96,7 +96,7 @@
     padding: 0;
     line-height: 2;
     background-color: var(--white);
-    border: 1px solid var(--red);
+    border: 1px solid #BD3213;
     
 }
 .content h3,.content td {
@@ -117,3 +117,17 @@
     margin: 0;
 }
 
+.container{
+    margin-top: 120px; margin-bottom: 20px;
+}
+@media screen and (max-width: 600px) {
+    .container{
+        margin-top: 85px;
+    }
+    .col-sm-9 label, .col-sm-9 td, .col-sm-3 a, .col-sm-3 button{
+        font-size: 12px;
+    }
+    .col-sm-3 h3, .col-sm-9 h3{
+        font-size: 18px;
+    }
+}

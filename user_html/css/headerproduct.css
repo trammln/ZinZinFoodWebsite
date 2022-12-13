@@ -393,4 +393,8 @@
     .header .inputbox-search {
         width: 140px;
     }
+    .header .Search_Button {
+        height: 30px;
+        margin-bottom: 6px;
+    }
 }
