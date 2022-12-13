@@ -459,26 +459,29 @@ body {
         }
 
         .table_list_Order td:nth-child(2)::before {
-            content: "Ngày đặt hàng";
+            content: "Trạng thái";
         }
 
         .table_list_Order td:nth-child(3)::before {
-            content: "Tổng tiền";
+            content: "Ngày đặt hàng";
         }
 
         .table_list_Order td:nth-child(4)::before {
-            content: "Mã khách hàng";
+            content: "Tổng tiền";
         }
         .table_list_Order td:nth-child(5)::before {
-            content: "Mã giảm giá";
+            content: "Mã khách hàng";
         }
         .table_list_Order td:nth-child(6)::before {
-            content: "Phương thức vận chuyển";
+            content: "Mã giảm giá";
         }
         .table_list_Order td:nth-child(7)::before {
-            content: "Mã hóa đơn";
+            content: "Phương thức vận chuyển";
         }
         .table_list_Order td:nth-child(8)::before {
+            content: "Mã hóa đơn";
+        }
+        .table_list_Order td:nth-child(9)::before {
             content: "Ghi chú";
         }
     td {
@@ -543,25 +546,34 @@ body {
         .table_list_Order td:first-child::before {
             text-align: center;
             vertical-align: middle;
-            content: "Mã sản phẩm";
+            content: "Mã đơn hàng";
         }
 
         .table_list_Order td:nth-child(2)::before {
-            content: "Tên sản phẩm";
+            content: "Trạng thái";
         }
 
         .table_list_Order td:nth-child(3)::before {
-            content: "Nguồn nhập";
+            content: "Ngày đặt hàng";
         }
 
         .table_list_Order td:nth-child(4)::before {
-            content: "Số lượng";
+            content: "Tổng tiền";
         }
         .table_list_Order td:nth-child(5)::before {
-            content: "Tình trạng";
+            content: "Mã khách hàng";
         }
         .table_list_Order td:nth-child(6)::before {
-            content: "Thời gian";
+            content: "Mã giảm giá";
+        }
+        .table_list_Order td:nth-child(7)::before {
+            content: "Phương thức vận chuyển";
+        }
+        .table_list_Order td:nth-child(8)::before {
+            content: "Mã hóa đơn";
+        }
+        .table_list_Order td:nth-child(9)::before {
+            content: "Ghi chú";
         }
     td {
         text-align: right;

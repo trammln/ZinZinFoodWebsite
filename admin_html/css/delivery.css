@@ -508,7 +508,7 @@ body {
             content: "Thời gian";
         }
     td {
-        text-align: right;
+        text-align: center;
     }
 
         td::before {
