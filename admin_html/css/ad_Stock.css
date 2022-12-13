@@ -253,17 +253,13 @@ body {
     .table_list_Product {
         text-align: unset;
     }
-
         .table_list_Product tr {
             border: none;
             text-align:end;
         }
-
-
     thead {
         display: none;
     }
-
     .table_list_Product, .table_list_Product tbody, .table_list_Product tr, .table_list_Product td {
         display: block;
         width: 100%;
